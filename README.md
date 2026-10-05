@@ -18,10 +18,7 @@ npm run build
 
 ## Deploy (GitHub Pages)
 
-`.github/workflows/deploy.yml` runs typecheck, lint, tests and the build on every pull request. On pushes to `main`, it also deploys `dist/` to GitHub Pages.
-
-One-time setup:
-1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+`.github/workflows/deploy.yml` runs typecheck, lint, tests and the build on every pull request. On pushes to `main`, it publishes `dist/` to the `gh-pages` branch, which GitHub Pages serves (**Settings → Pages → Source: Deploy from a branch → `gh-pages` / root**). The site updates a minute or so after each merge.
 
 The build uses relative asset paths (`base: './'` in `vite.config.ts`), so it works at `https://<user>.github.io/<repo>/` or on a custom domain without changes.
 
