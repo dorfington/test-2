@@ -134,3 +134,14 @@ describe('cleanPayee: cities', () => {
     ['AMC CA', 'Amc'],
   ])('%s -> %s', (raw, want) => expect(cleanPayee(raw)).toBe(want))
 })
+
+describe('cleanPayee: bank suffixes', () => {
+  it.each([
+    ['AVALON APARTMENTS RENT WEB ID: 0001', 'Avalon Apartments Rent'],
+    ['DUKE ENERGY DES:BILL PAY', 'Duke Energy'],
+    ['GUSTO DES:NET PAY ID:1234 INDN:LEE', 'Gusto'],
+    ['ACME CORP PAYROLL PPD ID: 1234567890', 'Acme Corp Payroll'],
+    ['AUTOPAY PAYMENT - THANK YOU', 'Autopay Payment'],
+    ['Online Transfer to SAV ...4421 transaction#: 1234', 'Online Transfer To Sav'],
+  ])('%s -> %s', (raw, want) => expect(cleanPayee(raw)).toBe(want))
+})

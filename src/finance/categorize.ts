@@ -27,6 +27,10 @@ const PREFIXES = [
 ]
 
 const SUFFIXES = [
+  /\s+(ppd|web|ccd|ach)\s+id\b.*$/i,
+  /\s+(des|indn|co\s*id|id|ppd|web|ccd|tel|ach|conf|ref|trace|transaction)\s*(#|:).*$/i, // "DES:BILL PAY", "WEB ID: 0001", "transaction#: 99"
+  /\s*-\s*thank\s*you.*$/i, // "AUTOPAY PAYMENT - THANK YOU"
+  /\s+\.{2,}\s*\d{3,4}.*$/, // "to SAV ...4421"
   /\s+(#|store\s*#?|no\.?)\s*\d+.*$/i, // store numbers and everything after
   /\s+\d{3}[-.\s]?\d{3}[-.\s]?\d{4}.*$/, // phone numbers
   /\s+x{2,}\d{2,4}.*$/i, // masked card/account numbers

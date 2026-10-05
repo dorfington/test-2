@@ -6,6 +6,8 @@ import type { WhatIf } from '../model/derive'
 export type Step = 'income' | 'taxes' | 'expenses' | 'results'
 export const STEPS: Step[] = ['income', 'taxes', 'expenses', 'results']
 export type Theme = 'system' | 'light' | 'dark'
+export type View = 'budget' | 'accounts' | 'insights'
+export const VIEWS: View[] = ['budget', 'accounts', 'insights']
 
 interface BudgetState {
   profile: Profile
@@ -13,6 +15,9 @@ interface BudgetState {
   /** True once the user has reached results; unlocks jumping to any step. */
   completed: boolean
   theme: Theme
+  /** Top-level tab. */
+  view: View
+  setView: (v: View) => void
   /** Unsaved "what if" slider values. */
   whatIf: WhatIf
   setStep: (s: Step) => void
@@ -63,6 +68,8 @@ export const useBudgetStore = create<BudgetState>()(
       step: 'income',
       completed: false,
       theme: 'system',
+      view: 'budget',
+      setView: (view) => set({ view }),
       whatIf: {},
       setStep: (step) => set({ step }),
       update: (fn) =>
@@ -87,7 +94,7 @@ export const useBudgetStore = create<BudgetState>()(
       name: 'take-home-budget',
       version: 1,
       storage: createJSONStorage(() => safeStorage),
-      partialize: (s) => ({ profile: s.profile, step: s.step, completed: s.completed, theme: s.theme }),
+      partialize: (s) => ({ profile: s.profile, step: s.step, completed: s.completed, theme: s.theme, view: s.view }),
       // Validate whatever was stored; fall back to defaults field-by-field rather than crash.
       merge: (persisted, current) => {
         const p = (persisted ?? {}) as Partial<BudgetState>
@@ -98,6 +105,7 @@ export const useBudgetStore = create<BudgetState>()(
           step: parsed.success && p.step && (STEPS as string[]).includes(p.step) ? p.step : current.step,
           completed: parsed.success && p.completed === true,
           theme: p.theme === 'light' || p.theme === 'dark' || p.theme === 'system' ? p.theme : current.theme,
+          view: p.view && VIEWS.includes(p.view) ? p.view : current.view,
         }
       },
     },
