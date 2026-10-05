@@ -100,6 +100,12 @@ export const ProfileSchema = z.object({
     savings: z.object({ name: z.string().max(80), target: amount, saved: amount, deadline: z.string().nullable() }),
     debt: z.object({ name: z.string().max(80), balance: amount, aprPercent: z.number().min(0).max(100) }),
   }),
+  /** Tax actually withheld per paycheck, read from a pay stub (for the withholding check). */
+  withholding: z
+    // null = not read from the stub (unknown), which is different from $0 withheld.
+    .object({ federalPerPaycheck: amount.nullable(), statePerPaycheck: amount.nullable(), localPerPaycheck: amount.nullable(), payDate: z.string().nullable() })
+    .nullable()
+    .default(null),
 })
 export type Profile = z.infer<typeof ProfileSchema>
 
@@ -135,6 +141,7 @@ export const DEFAULT_PROFILE: Profile = {
     savings: { name: '', target: 0, saved: 0, deadline: null },
     debt: { name: '', balance: 0, aprPercent: 0 },
   },
+  withholding: null,
 }
 
 /** Starter rows shown on the expenses step for a new profile. */

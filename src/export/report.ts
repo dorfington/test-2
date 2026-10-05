@@ -3,6 +3,7 @@
  * each other and with the dashboard.
  */
 import type { Budget } from '../budget/budget'
+import { withholdingCheck } from '../budget/withholding'
 import type { TaxResult } from '../engine'
 import type { WhatIf } from '../model/derive'
 import { CATEGORIES, CATEGORY_LABELS, PAY_FREQUENCY_LABELS, PERIODS_PER_YEAR, type Profile } from '../model/profile'
@@ -57,6 +58,16 @@ export function buildReport(profile: Profile, tax: TaxResult, budget: Budget, wh
         .join(', ')
     : null
 
+  const wc = withholdingCheck(profile, tax)
+  const withholdingTable: ReportTable[] = wc
+    ? [{
+        title: 'Withholding check (from your pay stub, per year)',
+        head: ['Tax', 'Withheld', 'Estimated tax', 'Difference'],
+        rows: [...wc.rows, wc.total].map((r) => [r.name, r2(r.withheld), r2(r.owed), r2(r.diff)]),
+        moneyCols: [1, 2, 3],
+      }]
+    : []
+
   const goalRows = budget.goals.map((g) => [
     g.name,
     r2(g.target),
@@ -98,6 +109,7 @@ export function buildReport(profile: Profile, tax: TaxResult, budget: Budget, wh
       ...(goalRows.length
         ? [{ title: 'Goals', head: ['Goal', 'Target / balance', 'Saved', 'Per month', 'Time to reach'], rows: goalRows, moneyCols: [1, 2, 3] }]
         : []),
+      ...withholdingTable,
       {
         title: 'Recommendations',
         head: ['Priority', 'Recommendation', 'Details'],

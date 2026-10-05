@@ -6,6 +6,7 @@ import type { Step } from '../../store/useBudgetStore'
 import { useResults } from './useResults'
 import { ExportCard } from './ExportCard'
 import { Goals, Recommendations } from './Insights'
+import { WithholdingCard } from './WithholdingCard'
 import { SpendingDonut } from './SpendingDonut'
 import { SplitBars } from './SplitBars'
 import { TaxBreakdown } from './TaxBreakdown'
@@ -22,7 +23,7 @@ export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
     )
   }
 
-  const { profile, whatIf, tax, budget, deltaPerMonth } = results
+  const { profile, whatIf, tax, budget, withholding, deltaPerMonth } = results
   const net = periods(tax.net, profile.income.payFrequency)
   const notes = [...tax.state.notes, ...(tax.local?.notes ?? [])]
   const editLinks = (
@@ -99,6 +100,12 @@ export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
           <TaxBreakdown result={tax} payFrequency={profile.income.payFrequency} />
         </Card>
       </div>
+
+      {withholding && (
+        <Card title="Withholding check (from your pay stub)">
+          <WithholdingCard check={withholding} />
+        </Card>
+      )}
 
       <ExportCard profile={profile} tax={tax} budget={budget} whatIf={whatIf} />
 

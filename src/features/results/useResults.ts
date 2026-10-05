@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { buildBudget } from '../../budget/budget'
+import { withholdingCheck } from '../../budget/withholding'
 import { calculateTaxes } from '../../engine'
 import { toTaxInput } from '../../model/derive'
 import { useBudgetStore } from '../../store/useBudgetStore'
@@ -15,6 +16,6 @@ export function useResults() {
     const budget = buildBudget(profile, tax, whatIf)
     const hasWhatIf = Object.keys(whatIf).length > 0
     const savedNet = hasWhatIf ? calculateTaxes(toTaxInput(profile)!).net : tax.net
-    return { profile, whatIf, tax, budget, deltaPerMonth: hasWhatIf ? (tax.net - savedNet) / 12 : null }
+    return { profile, whatIf, tax, budget, withholding: withholdingCheck(profile, tax), deltaPerMonth: hasWhatIf ? (tax.net - savedNet) / 12 : null }
   }, [profile, whatIf])
 }

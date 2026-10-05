@@ -41,6 +41,24 @@ The build uses relative asset paths (`base: './'` in `vite.config.ts`), so it wo
 
 Click any step in the stepper to change it later. Everything is saved in your browser's localStorage, and nothing is sent anywhere. "Start over" clears it.
 
+## Pay stub import
+
+On the Income step, **Take a photo** or **Upload photo or PDF** of a recent pay stub. It's read **on the device**: nothing is uploaded.
+
+- **PDFs with a text layer** (downloads from ADP, Workday, Gusto, etc.) are read exactly with pdf.js.
+- **Photos and scanned PDFs** are read with Tesseract OCR in a web worker. The engine (~4 MB, one variant chosen for the device's WebAssembly support) and English data (~3 MB) are served from this site (`ocr-assets.ts` copies them from `node_modules` at build time), not from a CDN, and load only on first use.
+- `src/paystub/parse.ts` splits each printed row into "label + amounts" segments, so side-by-side tables are read correctly. It then picks out:
+  - gross pay and YTD, net pay, pay date, and frequency (from the period dates, the stated frequency or standard hours)
+  - hourly rate and hours
+  - 401(k)/403(b), with Roth flagged separately
+  - health/dental/vision premiums and HSA/FSA
+  - federal, state and local withholding
+  - the state and the filing status
+- Every value is shown with the stub text it came from, and you confirm or edit it before it's applied. A value that couldn't be read is left out, never treated as $0.
+- **Withholding check:** tax withheld per paycheck × paychecks per year is compared with the estimated tax, to show a likely refund or balance due.
+
+Tests use hand-written stub layouts, a generated PDF read with pdf.js, and real Tesseract output from a scanned and a photographed stub (`src/paystub/__tests__`).
+
 ## Budget rules
 
 - **Base for 50/30/20:** take-home pay plus pre-tax payroll deductions. Your 401(k)/HSA counts as savings and your health premiums count as needs. The employer match is extra savings, shown separately.
