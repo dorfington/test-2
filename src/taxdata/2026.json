@@ -1,0 +1,6991 @@
+{
+  "year": 2026,
+  "lastReviewed": "2026-10-05",
+  "federal": {
+    "sources": [
+      {
+        "name": "IRS Rev. Proc. 2025-32",
+        "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"
+      },
+      {
+        "name": "IRS: 2026 inflation adjustments including OBBBA amendments",
+        "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill"
+      },
+      {
+        "name": "IRS: 401(k) contribution limit for 2026",
+        "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500"
+      }
+    ],
+    "standardDeduction": {
+      "single": 16100,
+      "married": 32200,
+      "headOfHousehold": 24150
+    },
+    "brackets": {
+      "single": [
+        {
+          "over": 0.0,
+          "rate": 0.1
+        },
+        {
+          "over": 12400.0,
+          "rate": 0.12
+        },
+        {
+          "over": 50400.0,
+          "rate": 0.22
+        },
+        {
+          "over": 105700.0,
+          "rate": 0.24
+        },
+        {
+          "over": 201775.0,
+          "rate": 0.32
+        },
+        {
+          "over": 256225.0,
+          "rate": 0.35
+        },
+        {
+          "over": 640600.0,
+          "rate": 0.37
+        }
+      ],
+      "married": [
+        {
+          "over": 0.0,
+          "rate": 0.1
+        },
+        {
+          "over": 24800.0,
+          "rate": 0.12
+        },
+        {
+          "over": 100800.0,
+          "rate": 0.22
+        },
+        {
+          "over": 211400.0,
+          "rate": 0.24
+        },
+        {
+          "over": 403550.0,
+          "rate": 0.32
+        },
+        {
+          "over": 512450.0,
+          "rate": 0.35
+        },
+        {
+          "over": 768700.0,
+          "rate": 0.37
+        }
+      ],
+      "headOfHousehold": [
+        {
+          "over": 0.0,
+          "rate": 0.1
+        },
+        {
+          "over": 17700.0,
+          "rate": 0.12
+        },
+        {
+          "over": 67450.0,
+          "rate": 0.22
+        },
+        {
+          "over": 105700.0,
+          "rate": 0.24
+        },
+        {
+          "over": 201750.0,
+          "rate": 0.32
+        },
+        {
+          "over": 256200.0,
+          "rate": 0.35
+        },
+        {
+          "over": 640600.0,
+          "rate": 0.37
+        }
+      ]
+    },
+    "childTaxCredit": {
+      "perChild": 2200,
+      "refundablePerChild": 1700,
+      "refundableEarnedIncomeRate": 0.15,
+      "earnedIncomeThreshold": 2500,
+      "phaseoutStart": {
+        "single": 200000,
+        "married": 400000,
+        "headOfHousehold": 200000
+      },
+      "phaseoutPer1000": 50
+    },
+    "retirementDeferralLimit": 24500
+  },
+  "fica": {
+    "sources": [
+      {
+        "name": "SSA, contribution and benefit base",
+        "url": "https://www.ssa.gov/oact/cola/cbb.html"
+      },
+      {
+        "name": "IRS Topic 751, Social Security and Medicare withholding rates",
+        "url": "https://www.irs.gov/taxtopics/tc751"
+      },
+      {
+        "name": "IRS, Questions and answers for the Additional Medicare Tax",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/questions-and-answers-for-the-additional-medicare-tax"
+      }
+    ],
+    "socialSecurity": {
+      "rate": 0.062,
+      "wageBase": 184500
+    },
+    "medicare": {
+      "rate": 0.0145,
+      "additionalRate": 0.009,
+      "additionalThreshold": {
+        "single": 200000,
+        "married": 250000,
+        "headOfHousehold": 200000
+      }
+    }
+  },
+  "states": {
+    "AL": {
+      "name": "Alabama",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Alabama Department of Revenue",
+          "url": "https://www.revenue.alabama.gov/individual-corporate/taxes-administered/individual-income-tax/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Alabama allows a deduction for federal income tax paid; this estimate deducts the federal tax computed here.",
+        "Standard deduction phase-out is approximated as linear."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 500.0,
+            "rate": 0.04
+          },
+          {
+            "over": 3000.0,
+            "rate": 0.05
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 1000.0,
+            "rate": 0.04
+          },
+          {
+            "over": 6000.0,
+            "rate": 0.05
+          }
+        ]
+      },
+      "hohUses": "single",
+      "federalTaxDeduction": {},
+      "standardDeduction": {
+        "amount": {
+          "single": 3000,
+          "married": 8500,
+          "headOfHousehold": 5200
+        },
+        "phaseout": {
+          "start": {
+            "single": 25500,
+            "married": 26000,
+            "headOfHousehold": 25500
+          },
+          "end": {
+            "single": 35500,
+            "married": 36000,
+            "headOfHousehold": 35500
+          },
+          "floor": {
+            "single": 2500,
+            "married": 5000,
+            "headOfHousehold": 2600
+          }
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 1500,
+          "married": 3000,
+          "headOfHousehold": 3000
+        },
+        "perDependent": 1000,
+        "agiTiers": [
+          {
+            "agiUpTo": 50000,
+            "perDependent": 1000
+          },
+          {
+            "agiUpTo": 100000,
+            "perDependent": 500
+          },
+          {
+            "agiUpTo": null,
+            "perDependent": 300
+          }
+        ]
+      }
+    },
+    "AK": {
+      "name": "Alaska",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Alaska Department of Revenue",
+          "url": "https://tax.alaska.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [
+        {
+          "name": "Unemployment insurance (employee)",
+          "rate": 0.005,
+          "sources": [
+            {
+              "name": "Alaska DOL, taxable wage base",
+              "url": "https://live.laborstats.alaska.gov/sites/default/files/2025-12/The%20taxable%20wage%20base.pdf"
+            }
+          ],
+          "wageBase": 54200
+        }
+      ]
+    },
+    "AZ": {
+      "name": "Arizona",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Arizona Department of Revenue",
+          "url": "https://azdor.gov/individual-income-tax-information"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Arizona had not conformed to the 2025 federal standard deduction increase when this data was compiled; the pre-OBBBA amount is used and head of household uses the single amount."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.025
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.025
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 8350,
+          "married": 16700
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 100
+      },
+      "hohUses": "single"
+    },
+    "AR": {
+      "name": "Arkansas",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Arkansas DFA, Income Tax",
+          "url": "https://www.dfa.arkansas.gov/office/taxes/income-tax-administration/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Arkansas uses separate tax tables at or below $92,300 of income; the bracket adjustment near that threshold is not modeled.",
+        "2026 top rate cut to 3.7% (retroactive to Jan 1, 2026); the low-income table is assumed to use the same top rate."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 4600.0,
+            "rate": 0.037
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 4600.0,
+            "rate": 0.037
+          }
+        ]
+      },
+      "hohUses": "single",
+      "lowIncomeSchedule": {
+        "maxTaxableIncome": 92300,
+        "brackets": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 5500.0,
+            "rate": 0.02
+          },
+          {
+            "over": 10900.0,
+            "rate": 0.03
+          },
+          {
+            "over": 15600.0,
+            "rate": 0.034
+          },
+          {
+            "over": 25700.0,
+            "rate": 0.037
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 2470,
+          "married": 4940
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 29,
+          "married": 58,
+          "headOfHousehold": 29
+        },
+        "perDependent": 29
+      }
+    },
+    "CA": {
+      "name": "California",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "California FTB, 2025 Tax Rate Schedules",
+          "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Rates include the 1% Mental Health Services Tax on taxable income over $1 million.",
+        "2026 inflation-indexed amounts were not yet published when this data was compiled; 2025 amounts are used."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "State Disability Insurance (SDI)",
+          "rate": 0.013,
+          "sources": [
+            {
+              "name": "California EDD, rates and withholding",
+              "url": "https://edd.ca.gov/en/payroll_taxes/rates_and_withholding"
+            }
+          ],
+          "note": "No wage cap since 2024."
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.01
+          },
+          {
+            "over": 11079.0,
+            "rate": 0.02
+          },
+          {
+            "over": 26264.0,
+            "rate": 0.04
+          },
+          {
+            "over": 41452.0,
+            "rate": 0.06
+          },
+          {
+            "over": 57542.0,
+            "rate": 0.08
+          },
+          {
+            "over": 72724.0,
+            "rate": 0.093
+          },
+          {
+            "over": 371479.0,
+            "rate": 0.103
+          },
+          {
+            "over": 445771.0,
+            "rate": 0.113
+          },
+          {
+            "over": 742953.0,
+            "rate": 0.123
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.133
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.01
+          },
+          {
+            "over": 22158.0,
+            "rate": 0.02
+          },
+          {
+            "over": 52528.0,
+            "rate": 0.04
+          },
+          {
+            "over": 82904.0,
+            "rate": 0.06
+          },
+          {
+            "over": 115084.0,
+            "rate": 0.08
+          },
+          {
+            "over": 145448.0,
+            "rate": 0.093
+          },
+          {
+            "over": 742958.0,
+            "rate": 0.103
+          },
+          {
+            "over": 891542.0,
+            "rate": 0.113
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.123
+          },
+          {
+            "over": 1485906.0,
+            "rate": 0.133
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "over": 0.0,
+            "rate": 0.01
+          },
+          {
+            "over": 22173.0,
+            "rate": 0.02
+          },
+          {
+            "over": 52530.0,
+            "rate": 0.04
+          },
+          {
+            "over": 67716.0,
+            "rate": 0.06
+          },
+          {
+            "over": 83805.0,
+            "rate": 0.08
+          },
+          {
+            "over": 98990.0,
+            "rate": 0.093
+          },
+          {
+            "over": 505208.0,
+            "rate": 0.103
+          },
+          {
+            "over": 606251.0,
+            "rate": 0.113
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.123
+          },
+          {
+            "over": 1010417.0,
+            "rate": 0.133
+          }
+        ]
+      },
+      "taxesHsa": true,
+      "standardDeduction": {
+        "amount": {
+          "single": 5706,
+          "married": 11412,
+          "headOfHousehold": 11412
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 153,
+          "married": 306,
+          "headOfHousehold": 153
+        },
+        "perDependent": 475,
+        "stepPhaseout": {
+          "start": {
+            "single": 252203,
+            "married": 504411,
+            "headOfHousehold": 378310
+          },
+          "step": 2500,
+          "amountPerCredit": 6
+        }
+      }
+    },
+    "CO": {
+      "name": "Colorado",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Colorado Department of Revenue",
+          "url": "https://tax.colorado.gov/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "FAMLI paid leave (employee share)",
+          "rate": 0.0044,
+          "sources": [
+            {
+              "name": "Colorado FAMLI",
+              "url": "https://famli.colorado.gov/employers/premiums"
+            }
+          ],
+          "wageBase": "socialSecurity",
+          "note": "Employees pay up to half of the total premium (0.9% in 2025, 0.88% in 2026)."
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.044
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.044
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      },
+      "hohUses": "single"
+    },
+    "CT": {
+      "name": "Connecticut",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Connecticut DRS",
+          "url": "https://portal.ct.gov/drs/individuals/individual-tax-page/income-tax-information"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Connecticut's 2% bracket phase-out, benefit recapture and personal tax credits are not modeled; estimates may be off by a few hundred dollars above roughly $56,500 of income.",
+        "Head of household uses the single brackets here."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Leave",
+          "rate": 0.005,
+          "sources": [
+            {
+              "name": "CT Paid Leave Authority",
+              "url": "https://ctpaidleave.org/s/employers"
+            }
+          ],
+          "wageBase": "socialSecurity"
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.045
+          },
+          {
+            "over": 50000.0,
+            "rate": 0.055
+          },
+          {
+            "over": 100000.0,
+            "rate": 0.06
+          },
+          {
+            "over": 200000.0,
+            "rate": 0.065
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.069
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0699
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 20000.0,
+            "rate": 0.045
+          },
+          {
+            "over": 100000.0,
+            "rate": 0.055
+          },
+          {
+            "over": 200000.0,
+            "rate": 0.06
+          },
+          {
+            "over": 400000.0,
+            "rate": 0.065
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.069
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.0699
+          }
+        ]
+      },
+      "hohUses": "single",
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 15000,
+          "married": 24000,
+          "headOfHousehold": 19000
+        },
+        "perDependent": 0,
+        "phaseout": {
+          "start": {
+            "single": 30000,
+            "married": 48000,
+            "headOfHousehold": 38000
+          },
+          "end": {
+            "single": 45000,
+            "married": 72000,
+            "headOfHousehold": 57000
+          }
+        }
+      }
+    },
+    "DE": {
+      "name": "Delaware",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Delaware Division of Revenue",
+          "url": "https://revenue.delaware.gov/personal-income-tax/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [
+        {
+          "name": "Paid Leave (employee share)",
+          "rate": 0.004,
+          "sources": [
+            {
+              "name": "Delaware Paid Leave",
+              "url": "https://labor.delaware.gov/divisions/paid-leave/"
+            }
+          ],
+          "wageBase": "socialSecurity",
+          "note": "Total 0.8%; employers may deduct up to half from wages."
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 2000.0,
+            "rate": 0.022
+          },
+          {
+            "over": 5000.0,
+            "rate": 0.039
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.048
+          },
+          {
+            "over": 20000.0,
+            "rate": 0.052
+          },
+          {
+            "over": 25000.0,
+            "rate": 0.0555
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.066
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 2000.0,
+            "rate": 0.022
+          },
+          {
+            "over": 5000.0,
+            "rate": 0.039
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.048
+          },
+          {
+            "over": 20000.0,
+            "rate": 0.052
+          },
+          {
+            "over": 25000.0,
+            "rate": 0.0555
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.066
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 3250,
+          "married": 6500,
+          "headOfHousehold": 3250
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 110,
+          "married": 220,
+          "headOfHousehold": 110
+        },
+        "perDependent": 110
+      }
+    },
+    "DC": {
+      "name": "District of Columbia",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "DC Office of Tax and Revenue",
+          "url": "https://otr.cfo.dc.gov/page/dc-individual-and-fiduciary-income-tax-rates"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.04
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.06
+          },
+          {
+            "over": 40000.0,
+            "rate": 0.065
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.085
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.0925
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0975
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.1075
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.04
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.06
+          },
+          {
+            "over": 40000.0,
+            "rate": 0.065
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.085
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.0925
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0975
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.1075
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      }
+    },
+    "FL": {
+      "name": "Florida",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Florida Department of Revenue",
+          "url": "https://floridarevenue.com/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": []
+    },
+    "GA": {
+      "name": "Georgia",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Georgia Department of Revenue",
+          "url": "https://dor.georgia.gov/taxes/individual-taxes"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        },
+        {
+          "name": "EY Tax News: Georgia lowers rate to 4.99% retroactive to Jan 1, 2026",
+          "url": "https://taxnews.ey.com/news/2026-1249-georgia-law-lowers-individual-personal-income-tax-rate-retroactive-to-january-1-2026"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0499
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0499
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 12000,
+          "married": 24000,
+          "headOfHousehold": 12000
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 4000
+      },
+      "hohUses": "single"
+    },
+    "HI": {
+      "name": "Hawaii",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Hawaii Department of Taxation",
+          "url": "https://tax.hawaii.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head-of-household brackets are 1.5x the single brackets; the head-of-household standard deduction uses the single amount.",
+        "Hawaii TDI is often paid by the employer and is not included."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.014
+          },
+          {
+            "over": 9600.0,
+            "rate": 0.032
+          },
+          {
+            "over": 14400.0,
+            "rate": 0.055
+          },
+          {
+            "over": 19200.0,
+            "rate": 0.064
+          },
+          {
+            "over": 24000.0,
+            "rate": 0.068
+          },
+          {
+            "over": 36000.0,
+            "rate": 0.072
+          },
+          {
+            "over": 48000.0,
+            "rate": 0.076
+          },
+          {
+            "over": 125000.0,
+            "rate": 0.079
+          },
+          {
+            "over": 175000.0,
+            "rate": 0.0825
+          },
+          {
+            "over": 225000.0,
+            "rate": 0.09
+          },
+          {
+            "over": 275000.0,
+            "rate": 0.1
+          },
+          {
+            "over": 325000.0,
+            "rate": 0.11
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.014
+          },
+          {
+            "over": 19200.0,
+            "rate": 0.032
+          },
+          {
+            "over": 28800.0,
+            "rate": 0.055
+          },
+          {
+            "over": 38400.0,
+            "rate": 0.064
+          },
+          {
+            "over": 48000.0,
+            "rate": 0.068
+          },
+          {
+            "over": 72000.0,
+            "rate": 0.072
+          },
+          {
+            "over": 96000.0,
+            "rate": 0.076
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.079
+          },
+          {
+            "over": 350000.0,
+            "rate": 0.0825
+          },
+          {
+            "over": 450000.0,
+            "rate": 0.09
+          },
+          {
+            "over": 550000.0,
+            "rate": 0.1
+          },
+          {
+            "over": 650000.0,
+            "rate": 0.11
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "over": 0.0,
+            "rate": 0.014
+          },
+          {
+            "over": 14400.0,
+            "rate": 0.032
+          },
+          {
+            "over": 21600.0,
+            "rate": 0.055
+          },
+          {
+            "over": 28800.0,
+            "rate": 0.064
+          },
+          {
+            "over": 36000.0,
+            "rate": 0.068
+          },
+          {
+            "over": 54000.0,
+            "rate": 0.072
+          },
+          {
+            "over": 72000.0,
+            "rate": 0.076
+          },
+          {
+            "over": 187500.0,
+            "rate": 0.079
+          },
+          {
+            "over": 262500.0,
+            "rate": 0.0825
+          },
+          {
+            "over": 337500.0,
+            "rate": 0.09
+          },
+          {
+            "over": 412500.0,
+            "rate": 0.1
+          },
+          {
+            "over": 487500.0,
+            "rate": 0.11
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 4400,
+          "married": 8800
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 1144,
+          "married": 2288,
+          "headOfHousehold": 1144
+        },
+        "perDependent": 1144
+      }
+    },
+    "ID": {
+      "name": "Idaho",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Idaho State Tax Commission",
+          "url": "https://tax.idaho.gov/taxes/income-tax/individual-income/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 4811.0,
+            "rate": 0.053
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 9622.0,
+            "rate": 0.053
+          }
+        ]
+      },
+      "hohUses": "married",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      }
+    },
+    "IL": {
+      "name": "Illinois",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Illinois Department of Revenue",
+          "url": "https://tax.illinois.gov/research/taxrates/income.html"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0495
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0495
+          }
+        ]
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 2925,
+          "married": 5850,
+          "headOfHousehold": 2925
+        },
+        "perDependent": 2925,
+        "phaseout": {
+          "start": {
+            "single": 250000,
+            "married": 500000,
+            "headOfHousehold": 250000
+          },
+          "end": {
+            "single": 250000,
+            "married": 500000,
+            "headOfHousehold": 250000
+          }
+        }
+      },
+      "hohUses": "single"
+    },
+    "IN": {
+      "name": "Indiana",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Indiana Department of Revenue",
+          "url": "https://www.in.gov/dor/individual-income-taxes/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Each child gets the $1,000 exemption plus the $1,500 additional exemption for qualifying children."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0295
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0295
+          }
+        ]
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 1000,
+          "married": 2000,
+          "headOfHousehold": 1000
+        },
+        "perDependent": 2500
+      },
+      "hohUses": "single"
+    },
+    "IA": {
+      "name": "Iowa",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Iowa Department of Revenue",
+          "url": "https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Iowa school district surtaxes are not included.",
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.038
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.038
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 40,
+          "married": 80,
+          "headOfHousehold": 40
+        },
+        "perDependent": 40
+      },
+      "hohUses": "single"
+    },
+    "KS": {
+      "name": "Kansas",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Kansas Department of Revenue",
+          "url": "https://www.ksrevenue.gov/perstaxtypesii.html"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.052
+          },
+          {
+            "over": 23000.0,
+            "rate": 0.0558
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.052
+          },
+          {
+            "over": 46000.0,
+            "rate": 0.0558
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 3605,
+          "married": 8240,
+          "headOfHousehold": 6180
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 9160,
+          "married": 18320,
+          "headOfHousehold": 9160
+        },
+        "perDependent": 2320
+      }
+    },
+    "KY": {
+      "name": "Kentucky",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Kentucky Department of Revenue",
+          "url": "https://revenue.ky.gov/Individual/Individual-Income-Tax/Pages/default.aspx"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Kentucky's standard deduction is not doubled on a joint return."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.035
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.035
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 3360,
+          "married": 3360,
+          "headOfHousehold": 3360
+        }
+      },
+      "hohUses": "single"
+    },
+    "LA": {
+      "name": "Louisiana",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Louisiana Department of Revenue",
+          "url": "https://revenue.louisiana.gov/individuals/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.03
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.03
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 12875,
+          "married": 25750,
+          "headOfHousehold": 25750
+        }
+      },
+      "hohUses": "single"
+    },
+    "ME": {
+      "name": "Maine",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Maine Revenue Services",
+          "url": "https://www.maine.gov/revenue/taxes/income-estate-tax/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Maine conforms to the pre-OBBBA federal standard deduction for 2026; head of household uses the single amount. Phase-out thresholds use 2025 values.",
+        "Head of household uses the single brackets here."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Family & Medical Leave (employee share)",
+          "rate": 0.005,
+          "sources": [
+            {
+              "name": "Maine Paid Leave",
+              "url": "https://www.maine.gov/paidleave/"
+            }
+          ],
+          "wageBase": "socialSecurity"
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.058
+          },
+          {
+            "over": 27399.0,
+            "rate": 0.0675
+          },
+          {
+            "over": 64849.0,
+            "rate": 0.0715
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.058
+          },
+          {
+            "over": 54849.0,
+            "rate": 0.0675
+          },
+          {
+            "over": 129749.0,
+            "rate": 0.0715
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 8350,
+          "married": 16700
+        },
+        "phaseout": {
+          "start": {
+            "single": 102250,
+            "married": 204550,
+            "headOfHousehold": 153400
+          },
+          "end": {
+            "single": 177250,
+            "married": 354550,
+            "headOfHousehold": 265900
+          }
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 5300,
+          "married": 10600,
+          "headOfHousehold": 5300
+        },
+        "perDependent": 305,
+        "dependentKind": "credit"
+      }
+    },
+    "MD": {
+      "name": "Maryland",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Exemption phase-out is approximated as linear (Maryland reduces it in steps).",
+        "Add your county under \"Local tax\" - every Maryland resident pays one."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 1000.0,
+            "rate": 0.03
+          },
+          {
+            "over": 2000.0,
+            "rate": 0.04
+          },
+          {
+            "over": 3000.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 100000.0,
+            "rate": 0.05
+          },
+          {
+            "over": 125000.0,
+            "rate": 0.0525
+          },
+          {
+            "over": 150000.0,
+            "rate": 0.055
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.0575
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0625
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.065
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 1000.0,
+            "rate": 0.03
+          },
+          {
+            "over": 2000.0,
+            "rate": 0.04
+          },
+          {
+            "over": 3000.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 150000.0,
+            "rate": 0.05
+          },
+          {
+            "over": 175000.0,
+            "rate": 0.0525
+          },
+          {
+            "over": 225000.0,
+            "rate": 0.055
+          },
+          {
+            "over": 300000.0,
+            "rate": 0.0575
+          },
+          {
+            "over": 600000.0,
+            "rate": 0.0625
+          },
+          {
+            "over": 1200000.0,
+            "rate": 0.065
+          }
+        ]
+      },
+      "hohUses": "married",
+      "standardDeduction": {
+        "amount": {
+          "single": 3350,
+          "married": 6700,
+          "headOfHousehold": 6700
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 3200,
+          "married": 6400,
+          "headOfHousehold": 3200
+        },
+        "perDependent": 3200,
+        "phaseout": {
+          "start": {
+            "single": 100000,
+            "married": 150000,
+            "headOfHousehold": 125000
+          },
+          "end": {
+            "single": 150000,
+            "married": 200000,
+            "headOfHousehold": 175000
+          }
+        }
+      }
+    },
+    "MA": {
+      "name": "Massachusetts",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Massachusetts DOR, tax rates",
+          "url": "https://www.mass.gov/info-details/massachusetts-tax-rates"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "The 4% surtax threshold uses the 2025 amount. The deduction for Social Security/Medicare withholding (max $2,000) is not modeled."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Family & Medical Leave (employee share)",
+          "rate": 0.0046,
+          "sources": [
+            {
+              "name": "Mass.gov PFML contribution rates",
+              "url": "https://www.mass.gov/info-details/paid-family-and-medical-leave-pfml-contribution-rates-and-calculator"
+            }
+          ],
+          "wageBase": "socialSecurity"
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.05
+          },
+          {
+            "over": 1083150.0,
+            "rate": 0.09
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.05
+          },
+          {
+            "over": 1083150.0,
+            "rate": 0.09
+          }
+        ]
+      },
+      "hohUses": "single",
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 4400,
+          "married": 8800,
+          "headOfHousehold": 6800
+        },
+        "perDependent": 1000
+      }
+    },
+    "MI": {
+      "name": "Michigan",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Michigan Department of Treasury",
+          "url": "https://www.michigan.gov/taxes/iit"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0425
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0425
+          }
+        ]
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 5900,
+          "married": 11800,
+          "headOfHousehold": 5900
+        },
+        "perDependent": 5900
+      },
+      "hohUses": "single"
+    },
+    "MN": {
+      "name": "Minnesota",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Minnesota Department of Revenue",
+          "url": "https://www.revenue.state.mn.us/minnesota-income-tax-rates-and-brackets"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single brackets and standard deduction here. The high-income standard deduction reduction is not modeled."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Leave (employee share)",
+          "rate": 0.0044,
+          "sources": [
+            {
+              "name": "Minnesota Paid Leave premiums",
+              "url": "https://mn.gov/deed/paidleave/employers/premiums/"
+            }
+          ],
+          "wageBase": "socialSecurity",
+          "note": "Total 0.88%; employers may deduct up to half."
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0535
+          },
+          {
+            "over": 33310.0,
+            "rate": 0.068
+          },
+          {
+            "over": 109430.0,
+            "rate": 0.0785
+          },
+          {
+            "over": 203150.0,
+            "rate": 0.0985
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0535
+          },
+          {
+            "over": 48700.0,
+            "rate": 0.068
+          },
+          {
+            "over": 193480.0,
+            "rate": 0.0785
+          },
+          {
+            "over": 337930.0,
+            "rate": 0.0985
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 15300,
+          "married": 30600
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 5300
+      }
+    },
+    "MS": {
+      "name": "Mississippi",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Mississippi Department of Revenue",
+          "url": "https://www.dor.ms.gov/individual"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.04
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.04
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 2300,
+          "married": 4600,
+          "headOfHousehold": 3400
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 6000,
+          "married": 12000,
+          "headOfHousehold": 9500
+        },
+        "perDependent": 1500
+      },
+      "hohUses": "single"
+    },
+    "MO": {
+      "name": "Missouri",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Missouri Department of Revenue",
+          "url": "https://dor.mo.gov/taxation/individual/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 1348.0,
+            "rate": 0.02
+          },
+          {
+            "over": 2696.0,
+            "rate": 0.025
+          },
+          {
+            "over": 4044.0,
+            "rate": 0.03
+          },
+          {
+            "over": 5392.0,
+            "rate": 0.035
+          },
+          {
+            "over": 6740.0,
+            "rate": 0.04
+          },
+          {
+            "over": 8088.0,
+            "rate": 0.045
+          },
+          {
+            "over": 9436.0,
+            "rate": 0.047
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 1348.0,
+            "rate": 0.02
+          },
+          {
+            "over": 2696.0,
+            "rate": 0.025
+          },
+          {
+            "over": 4044.0,
+            "rate": 0.03
+          },
+          {
+            "over": 5392.0,
+            "rate": 0.035
+          },
+          {
+            "over": 6740.0,
+            "rate": 0.04
+          },
+          {
+            "over": 8088.0,
+            "rate": 0.045
+          },
+          {
+            "over": 9436.0,
+            "rate": 0.047
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      },
+      "federalTaxDeduction": {
+        "agiTiers": [
+          {
+            "agiUpTo": 25000,
+            "percent": 0.35
+          },
+          {
+            "agiUpTo": 50000,
+            "percent": 0.25
+          },
+          {
+            "agiUpTo": 100000,
+            "percent": 0.15
+          },
+          {
+            "agiUpTo": 125000,
+            "percent": 0.05
+          },
+          {
+            "agiUpTo": null,
+            "percent": 0
+          }
+        ],
+        "cap": {
+          "single": 5000,
+          "married": 10000,
+          "headOfHousehold": 5000
+        }
+      }
+    },
+    "MT": {
+      "name": "Montana",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Montana Department of Revenue",
+          "url": "https://revenue.mt.gov/taxes/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single brackets here.",
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.047
+          },
+          {
+            "over": 47500.0,
+            "rate": 0.0565
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.047
+          },
+          {
+            "over": 95000.0,
+            "rate": 0.0565
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      }
+    },
+    "NE": {
+      "name": "Nebraska",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Nebraska Department of Revenue",
+          "url": "https://revenue.nebraska.gov/individuals"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single brackets and standard deduction here."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0246
+          },
+          {
+            "over": 4130.0,
+            "rate": 0.0351
+          },
+          {
+            "over": 24760.0,
+            "rate": 0.0455
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0246
+          },
+          {
+            "over": 8250.0,
+            "rate": 0.0351
+          },
+          {
+            "over": 49530.0,
+            "rate": 0.0455
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 8850,
+          "married": 17700
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 176,
+          "married": 352,
+          "headOfHousehold": 176
+        },
+        "perDependent": 176
+      }
+    },
+    "NV": {
+      "name": "Nevada",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Nevada Department of Taxation",
+          "url": "https://tax.nv.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": []
+    },
+    "NH": {
+      "name": "New Hampshire",
+      "type": "none",
+      "sources": [
+        {
+          "name": "New Hampshire DRA",
+          "url": "https://www.revenue.nh.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "New Hampshire's interest and dividends tax was repealed starting in 2025; wages are not taxed."
+      ],
+      "payrollTaxes": []
+    },
+    "NJ": {
+      "name": "New Jersey",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "New Jersey Division of Taxation",
+          "url": "https://www.nj.gov/treasury/taxation/taxtables.shtml"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "New Jersey taxes Section 125 (cafeteria plan) and HSA payroll contributions."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Unemployment & workforce (employee)",
+          "rate": 0.00425,
+          "sources": [
+            {
+              "name": "NJ Dept. of Labor, rate information",
+              "url": "https://www.nj.gov/labor/ea/employer-services/rate-info"
+            }
+          ],
+          "wageBase": 44800
+        },
+        {
+          "name": "Temporary Disability Insurance",
+          "rate": 0.0019,
+          "sources": [
+            {
+              "name": "NJ Dept. of Labor, rate information",
+              "url": "https://www.nj.gov/labor/ea/employer-services/rate-info"
+            }
+          ],
+          "wageBase": 171100
+        },
+        {
+          "name": "Family Leave Insurance",
+          "rate": 0.0023,
+          "sources": [
+            {
+              "name": "NJ Dept. of Labor, rate information",
+              "url": "https://www.nj.gov/labor/ea/employer-services/rate-info"
+            }
+          ],
+          "wageBase": 171100
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.014
+          },
+          {
+            "over": 20000.0,
+            "rate": 0.0175
+          },
+          {
+            "over": 35000.0,
+            "rate": 0.035
+          },
+          {
+            "over": 40000.0,
+            "rate": 0.0553
+          },
+          {
+            "over": 75000.0,
+            "rate": 0.0637
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0897
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.1075
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.014
+          },
+          {
+            "over": 20000.0,
+            "rate": 0.0175
+          },
+          {
+            "over": 50000.0,
+            "rate": 0.0245
+          },
+          {
+            "over": 70000.0,
+            "rate": 0.035
+          },
+          {
+            "over": 80000.0,
+            "rate": 0.0553
+          },
+          {
+            "over": 150000.0,
+            "rate": 0.0637
+          },
+          {
+            "over": 500000.0,
+            "rate": 0.0897
+          },
+          {
+            "over": 1000000.0,
+            "rate": 0.1075
+          }
+        ]
+      },
+      "hohUses": "married",
+      "taxesHsa": true,
+      "taxesSection125": true,
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 1000,
+          "married": 2000,
+          "headOfHousehold": 1000
+        },
+        "perDependent": 1500
+      }
+    },
+    "NM": {
+      "name": "New Mexico",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "New Mexico Taxation and Revenue",
+          "url": "https://www.tax.newmexico.gov/individuals/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.015
+          },
+          {
+            "over": 5500.0,
+            "rate": 0.032
+          },
+          {
+            "over": 16500.0,
+            "rate": 0.043
+          },
+          {
+            "over": 33500.0,
+            "rate": 0.047
+          },
+          {
+            "over": 66500.0,
+            "rate": 0.049
+          },
+          {
+            "over": 210000.0,
+            "rate": 0.059
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.015
+          },
+          {
+            "over": 8000.0,
+            "rate": 0.032
+          },
+          {
+            "over": 25000.0,
+            "rate": 0.043
+          },
+          {
+            "over": 50000.0,
+            "rate": 0.047
+          },
+          {
+            "over": 100000.0,
+            "rate": 0.049
+          },
+          {
+            "over": 315000.0,
+            "rate": 0.059
+          }
+        ]
+      },
+      "hohUses": "married",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 4000,
+        "firstDependentsExcluded": 1
+      }
+    },
+    "NY": {
+      "name": "New York",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "NY State, IT-201 instructions (rate schedules, recapture worksheets)",
+          "url": "https://www.tax.ny.gov/forms/current-forms/it/it201i.htm"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Includes New York's \"tax benefit recapture\" for AGI above $107,650.",
+        "2026 rate cuts apply to the same bracket thresholds as 2025."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Family Leave",
+          "rate": 0.00432,
+          "sources": [
+            {
+              "name": "NY DFS, Paid Family Leave rate decision",
+              "url": "https://www.dfs.ny.gov/apps-and-licensing/health-insurers/pfl-rate-decision-2026-page"
+            }
+          ],
+          "annualMax": 411.91
+        },
+        {
+          "name": "Disability insurance (SDI)",
+          "rate": 0.005,
+          "sources": [
+            {
+              "name": "NY Workers' Compensation Board, DBL",
+              "url": "https://www.wcb.ny.gov/content/main/DisabilityBenefits/Employer/employers-employees.jsp"
+            }
+          ],
+          "annualMax": 31.2,
+          "note": "0.5% of wages up to $0.60 per week."
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.039
+          },
+          {
+            "over": 8500.0,
+            "rate": 0.044
+          },
+          {
+            "over": 11700.0,
+            "rate": 0.0515
+          },
+          {
+            "over": 13900.0,
+            "rate": 0.054
+          },
+          {
+            "over": 80650.0,
+            "rate": 0.059
+          },
+          {
+            "over": 215400.0,
+            "rate": 0.0685
+          },
+          {
+            "over": 1077550.0,
+            "rate": 0.0965
+          },
+          {
+            "over": 5000000.0,
+            "rate": 0.103
+          },
+          {
+            "over": 25000000.0,
+            "rate": 0.109
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.039
+          },
+          {
+            "over": 17150.0,
+            "rate": 0.044
+          },
+          {
+            "over": 23600.0,
+            "rate": 0.0515
+          },
+          {
+            "over": 27900.0,
+            "rate": 0.054
+          },
+          {
+            "over": 161550.0,
+            "rate": 0.059
+          },
+          {
+            "over": 323200.0,
+            "rate": 0.0685
+          },
+          {
+            "over": 2155350.0,
+            "rate": 0.0965
+          },
+          {
+            "over": 5000000.0,
+            "rate": 0.103
+          },
+          {
+            "over": 25000000.0,
+            "rate": 0.109
+          }
+        ],
+        "headOfHousehold": [
+          {
+            "over": 0.0,
+            "rate": 0.039
+          },
+          {
+            "over": 12800.0,
+            "rate": 0.044
+          },
+          {
+            "over": 17650.0,
+            "rate": 0.0515
+          },
+          {
+            "over": 20900.0,
+            "rate": 0.054
+          },
+          {
+            "over": 107650.0,
+            "rate": 0.059
+          },
+          {
+            "over": 269300.0,
+            "rate": 0.0685
+          },
+          {
+            "over": 1616450.0,
+            "rate": 0.0965
+          },
+          {
+            "over": 5000000.0,
+            "rate": 0.103
+          },
+          {
+            "over": 25000000.0,
+            "rate": 0.109
+          }
+        ]
+      },
+      "recapture": {
+        "agiThreshold": 107650,
+        "phaseInRange": 50000,
+        "flatTopRateAboveAgi": 25000000
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 8000,
+          "married": 16050,
+          "headOfHousehold": 11200
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 1000
+      }
+    },
+    "NC": {
+      "name": "North Carolina",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "North Carolina DOR",
+          "url": "https://www.ncdor.gov/taxes-forms/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0399
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0399
+          }
+        ]
+      },
+      "standardDeduction": {
+        "amount": {
+          "single": 12750,
+          "married": 25500,
+          "headOfHousehold": 19125
+        }
+      },
+      "hohUses": "single"
+    },
+    "ND": {
+      "name": "North Dakota",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "North Dakota Office of State Tax Commissioner",
+          "url": "https://www.tax.nd.gov/individual"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single brackets here.",
+        "Uses the 2026 federal standard deduction."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 48475.0,
+            "rate": 0.0195
+          },
+          {
+            "over": 244825.0,
+            "rate": 0.025
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 80975.0,
+            "rate": 0.0195
+          },
+          {
+            "over": 298075.0,
+            "rate": 0.025
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 16100,
+          "married": 32200,
+          "headOfHousehold": 24150
+        }
+      }
+    },
+    "OH": {
+      "name": "Ohio",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Ohio Department of Taxation",
+          "url": "https://tax.ohio.gov/individual"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Ohio school district income taxes and the joint filing credit are not modeled."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 26050.0,
+            "rate": 0.0275
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 26050.0,
+            "rate": 0.0275
+          }
+        ]
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 2400,
+          "married": 4800,
+          "headOfHousehold": 2400
+        },
+        "perDependent": 2400,
+        "agiTiers": [
+          {
+            "agiUpTo": 40000,
+            "perPerson": 2400,
+            "perDependent": 2400
+          },
+          {
+            "agiUpTo": 80000,
+            "perPerson": 2150,
+            "perDependent": 2150
+          },
+          {
+            "agiUpTo": 500000,
+            "perPerson": 1900,
+            "perDependent": 1900
+          },
+          {
+            "agiUpTo": null,
+            "perPerson": 0,
+            "perDependent": 0
+          }
+        ]
+      },
+      "hohUses": "single"
+    },
+    "OK": {
+      "name": "Oklahoma",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Oklahoma Tax Commission",
+          "url": "https://oklahoma.gov/tax/individuals.html"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 3750.0,
+            "rate": 0.025
+          },
+          {
+            "over": 4900.0,
+            "rate": 0.035
+          },
+          {
+            "over": 7200.0,
+            "rate": 0.045
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0
+          },
+          {
+            "over": 7500.0,
+            "rate": 0.025
+          },
+          {
+            "over": 9800.0,
+            "rate": 0.035
+          },
+          {
+            "over": 14400.0,
+            "rate": 0.045
+          }
+        ]
+      },
+      "hohUses": "married",
+      "standardDeduction": {
+        "amount": {
+          "single": 6350,
+          "married": 12700,
+          "headOfHousehold": 9350
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 1000,
+          "married": 2000,
+          "headOfHousehold": 1000
+        },
+        "perDependent": 1000
+      }
+    },
+    "OR": {
+      "name": "Oregon",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Oregon Department of Revenue",
+          "url": "https://www.oregon.gov/dor/programs/individuals/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single standard deduction here. The federal tax subtraction cap uses the 2025 amount."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Leave Oregon (employee share)",
+          "rate": 0.006,
+          "sources": [
+            {
+              "name": "Oregon Employment Dept, current tax rates",
+              "url": "https://www.oregon.gov/employ/Businesses/Tax/Pages/Current-Tax-Rate.aspx"
+            }
+          ],
+          "wageBase": "socialSecurity"
+        },
+        {
+          "name": "Statewide transit tax",
+          "rate": 0.001,
+          "sources": [
+            {
+              "name": "Oregon DOR, statewide transit tax",
+              "url": "https://www.oregon.gov/dor/programs/businesses/Pages/statewide-transit-tax.aspx"
+            }
+          ]
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 4550.0,
+            "rate": 0.0675
+          },
+          {
+            "over": 11400.0,
+            "rate": 0.0875
+          },
+          {
+            "over": 125000.0,
+            "rate": 0.099
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 9100.0,
+            "rate": 0.0675
+          },
+          {
+            "over": 22800.0,
+            "rate": 0.0875
+          },
+          {
+            "over": 250000.0,
+            "rate": 0.099
+          }
+        ]
+      },
+      "hohUses": "married",
+      "standardDeduction": {
+        "amount": {
+          "single": 2910,
+          "married": 5820
+        }
+      },
+      "exemptions": {
+        "kind": "credit",
+        "personal": {
+          "single": 256,
+          "married": 512,
+          "headOfHousehold": 256
+        },
+        "perDependent": 256,
+        "phaseout": {
+          "start": {
+            "single": 100000,
+            "married": 200000,
+            "headOfHousehold": 200000
+          },
+          "end": {
+            "single": 100000,
+            "married": 200000,
+            "headOfHousehold": 200000
+          }
+        }
+      },
+      "federalTaxDeduction": {
+        "cap": {
+          "single": 8500,
+          "married": 8500,
+          "headOfHousehold": 8500
+        },
+        "capPhaseout": {
+          "start": {
+            "single": 125000,
+            "married": 250000,
+            "headOfHousehold": 250000
+          },
+          "end": {
+            "single": 145000,
+            "married": 290000,
+            "headOfHousehold": 290000
+          }
+        }
+      }
+    },
+    "PA": {
+      "name": "Pennsylvania",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Pennsylvania Department of Revenue",
+          "url": "https://www.revenue.pa.gov/TaxTypes/PIT/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Pennsylvania taxes 401(k)/403(b) contributions and has no standard deduction or exemptions."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Unemployment insurance (employee)",
+          "rate": 0.0007,
+          "sources": [
+            {
+              "name": "PA UC tax rates",
+              "url": "https://www.pa.gov/agencies/dli/programs-services/unemployment-compensation/uc-tax-services"
+            }
+          ]
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0307
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0307
+          }
+        ]
+      },
+      "taxes401k": true,
+      "hohUses": "single"
+    },
+    "RI": {
+      "name": "Rhode Island",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Rhode Island Division of Taxation",
+          "url": "https://tax.ri.gov/tax-sections/personal-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single standard deduction here."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Temporary Disability / Caregiver Insurance",
+          "rate": 0.011,
+          "sources": [
+            {
+              "name": "RI DLT, UI & TDI quick reference",
+              "url": "https://dlt.ri.gov/sites/g/files/xkgbur571/files/2026-06/7.1.26%20UI%20%26%20TDI%20Quick%20Reference.pdf"
+            }
+          ],
+          "wageBase": 100000
+        }
+      ],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0375
+          },
+          {
+            "over": 82050.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 186450.0,
+            "rate": 0.0599
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0375
+          },
+          {
+            "over": 82050.0,
+            "rate": 0.0475
+          },
+          {
+            "over": 186450.0,
+            "rate": 0.0599
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 11200,
+          "married": 22400
+        },
+        "phaseout": {
+          "start": {
+            "single": 261000,
+            "married": 261000,
+            "headOfHousehold": 261000
+          },
+          "end": {
+            "single": 290800,
+            "married": 290800,
+            "headOfHousehold": 290800
+          }
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 5250,
+          "married": 10500,
+          "headOfHousehold": 5250
+        },
+        "perDependent": 5250,
+        "phaseout": {
+          "start": {
+            "single": 261000,
+            "married": 261000,
+            "headOfHousehold": 261000
+          },
+          "end": {
+            "single": 290800,
+            "married": 290800,
+            "headOfHousehold": 290800
+          }
+        }
+      }
+    },
+    "SC": {
+      "name": "South Carolina",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "South Carolina DOR",
+          "url": "https://dor.sc.gov/tax/individual-income"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        },
+        {
+          "name": "SC DOR: Information about H.4216 (2026 rates and SC Income Adjusted Deduction)",
+          "url": "https://dor.sc.gov/news/information-about-h-4216"
+        },
+        {
+          "name": "SC Revenue and Fiscal Affairs: H.4216 fiscal impact (SCIAD phase-out ranges)",
+          "url": "https://www.scstatehouse.gov/sess126_2025-2026/fiscalimpactstatements/H4216%202026-02-24%20amended.pdf"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0199
+          },
+          {
+            "over": 30000.0,
+            "rate": 0.0521
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0199
+          },
+          {
+            "over": 30000.0,
+            "rate": 0.0521
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 15000,
+          "married": 30000,
+          "headOfHousehold": 22500
+        },
+        "phaseout": {
+          "start": {
+            "single": 40000,
+            "married": 80000,
+            "headOfHousehold": 60000
+          },
+          "end": {
+            "single": 95000,
+            "married": 190000,
+            "headOfHousehold": 142500
+          }
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 0,
+          "married": 0,
+          "headOfHousehold": 0
+        },
+        "perDependent": 4930
+      }
+    },
+    "SD": {
+      "name": "South Dakota",
+      "type": "none",
+      "sources": [
+        {
+          "name": "South Dakota DOR",
+          "url": "https://dor.sd.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": []
+    },
+    "TN": {
+      "name": "Tennessee",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Tennessee Department of Revenue",
+          "url": "https://www.tn.gov/revenue.html"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Tennessee has no tax on wages."
+      ],
+      "payrollTaxes": []
+    },
+    "TX": {
+      "name": "Texas",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Texas Comptroller",
+          "url": "https://comptroller.texas.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": []
+    },
+    "UT": {
+      "name": "Utah",
+      "type": "flat",
+      "sources": [
+        {
+          "name": "Utah State Tax Commission",
+          "url": "https://incometax.utah.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        },
+        {
+          "name": "EY Tax News: Utah lowers rate to 4.45% retroactive to Jan 1, 2026",
+          "url": "https://taxnews.ey.com/news/2026-0913-utah-law-lowers-state-income-tax-rate-retroactive-to-january-1-2026"
+        }
+      ],
+      "notes": [
+        "Credit phase-out thresholds and the dependent exemption use 2025 amounts."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0445
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0445
+          }
+        ]
+      },
+      "taxpayerCredit": {
+        "percent": 0.06,
+        "dependentExemption": 2111,
+        "phaseoutStart": {
+          "single": 18213,
+          "married": 36426,
+          "headOfHousehold": 27320
+        },
+        "phaseoutRate": 0.013
+      },
+      "hohUses": "single"
+    },
+    "VT": {
+      "name": "Vermont",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Vermont Department of Taxes",
+          "url": "https://tax.vermont.gov/individuals/personal-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single brackets and standard deduction here."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0335
+          },
+          {
+            "over": 49400.0,
+            "rate": 0.066
+          },
+          {
+            "over": 119700.0,
+            "rate": 0.076
+          },
+          {
+            "over": 249700.0,
+            "rate": 0.0875
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0335
+          },
+          {
+            "over": 82500.0,
+            "rate": 0.066
+          },
+          {
+            "over": 199450.0,
+            "rate": 0.076
+          },
+          {
+            "over": 304000.0,
+            "rate": 0.0875
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 7650,
+          "married": 15300
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 5300,
+          "married": 10600,
+          "headOfHousehold": 5300
+        },
+        "perDependent": 5300
+      },
+      "minimumTax": {
+        "agiOver": 150000,
+        "rate": 0.03
+      }
+    },
+    "VA": {
+      "name": "Virginia",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Virginia Tax",
+          "url": "https://www.tax.virginia.gov/individual-income-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 3000.0,
+            "rate": 0.03
+          },
+          {
+            "over": 5000.0,
+            "rate": 0.05
+          },
+          {
+            "over": 17000.0,
+            "rate": 0.0575
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.02
+          },
+          {
+            "over": 3000.0,
+            "rate": 0.03
+          },
+          {
+            "over": 5000.0,
+            "rate": 0.05
+          },
+          {
+            "over": 17000.0,
+            "rate": 0.0575
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 8750,
+          "married": 17500,
+          "headOfHousehold": 8750
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 930,
+          "married": 1860,
+          "headOfHousehold": 930
+        },
+        "perDependent": 930
+      }
+    },
+    "WA": {
+      "name": "Washington",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Washington DOR (capital gains only)",
+          "url": "https://dor.wa.gov/taxes-rates/other-taxes/capital-gains-tax"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Washington taxes only capital gains (not wages), so it is treated as having no income tax."
+      ],
+      "payrollTaxes": [
+        {
+          "name": "Paid Family & Medical Leave (employee share)",
+          "rate": 0.008072,
+          "sources": [
+            {
+              "name": "Washington ESD, PFML premium rate",
+              "url": "https://esd.wa.gov/node/1109"
+            }
+          ],
+          "wageBase": "socialSecurity",
+          "note": "Employees pay 71.43% of the total premium (0.92% in 2025, 1.13% in 2026)."
+        },
+        {
+          "name": "WA Cares long-term care",
+          "rate": 0.0058,
+          "sources": [
+            {
+              "name": "WA Cares Fund",
+              "url": "https://wacaresfund.wa.gov/"
+            }
+          ]
+        }
+      ]
+    },
+    "WV": {
+      "name": "West Virginia",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "West Virginia Tax Division",
+          "url": "https://tax.wv.gov/Individuals/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        },
+        {
+          "name": "EY Tax News: West Virginia SB 392 cuts rates 5% retroactive to Jan 1, 2026",
+          "url": "https://taxnews.ey.com/news/2026-0864-west-virginia-law-lowers-personal-income-tax-rate-retroactive-to-january-1-2026-updated-withholding-formula-is-now-available"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.0211
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.0281
+          },
+          {
+            "over": 25000.0,
+            "rate": 0.0316
+          },
+          {
+            "over": 40000.0,
+            "rate": 0.0422
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.0458
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.0211
+          },
+          {
+            "over": 10000.0,
+            "rate": 0.0281
+          },
+          {
+            "over": 25000.0,
+            "rate": 0.0316
+          },
+          {
+            "over": 40000.0,
+            "rate": 0.0422
+          },
+          {
+            "over": 60000.0,
+            "rate": 0.0458
+          }
+        ]
+      },
+      "hohUses": "single",
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 2000,
+          "married": 4000,
+          "headOfHousehold": 2000
+        },
+        "perDependent": 2000
+      }
+    },
+    "WI": {
+      "name": "Wisconsin",
+      "type": "progressive",
+      "sources": [
+        {
+          "name": "Wisconsin DOR",
+          "url": "https://www.revenue.wi.gov/Pages/FAQS/pcs-taxrates.aspx"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [
+        "Head of household uses the single standard deduction here (Wisconsin's HoH deduction is larger)."
+      ],
+      "payrollTaxes": [],
+      "brackets": {
+        "single": [
+          {
+            "over": 0.0,
+            "rate": 0.035
+          },
+          {
+            "over": 15110.0,
+            "rate": 0.044
+          },
+          {
+            "over": 51950.0,
+            "rate": 0.053
+          },
+          {
+            "over": 332720.0,
+            "rate": 0.0765
+          }
+        ],
+        "married": [
+          {
+            "over": 0.0,
+            "rate": 0.035
+          },
+          {
+            "over": 20150.0,
+            "rate": 0.044
+          },
+          {
+            "over": 69260.0,
+            "rate": 0.053
+          },
+          {
+            "over": 443630.0,
+            "rate": 0.0765
+          }
+        ]
+      },
+      "hohUses": "single",
+      "standardDeduction": {
+        "amount": {
+          "single": 13960,
+          "married": 25840
+        },
+        "phaseout": {
+          "start": {
+            "single": 20119,
+            "married": 29039,
+            "headOfHousehold": 20119
+          },
+          "end": {
+            "single": 136453,
+            "married": 159690,
+            "headOfHousehold": 136453
+          }
+        }
+      },
+      "exemptions": {
+        "kind": "deduction",
+        "personal": {
+          "single": 700,
+          "married": 1400,
+          "headOfHousehold": 700
+        },
+        "perDependent": 700
+      }
+    },
+    "WY": {
+      "name": "Wyoming",
+      "type": "none",
+      "sources": [
+        {
+          "name": "Wyoming Department of Revenue",
+          "url": "https://revenue.wyo.gov/"
+        },
+        {
+          "name": "Tax Foundation, 2026 State Income Tax Rates and Brackets",
+          "url": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/"
+        }
+      ],
+      "notes": [],
+      "payrollTaxes": []
+    }
+  },
+  "localities": [
+    {
+      "id": "ny-nyc",
+      "state": "NY",
+      "name": "New York City",
+      "components": [
+        {
+          "name": "NYC resident income tax",
+          "base": "stateTaxable",
+          "brackets": {
+            "single": [
+              {
+                "over": 0.0,
+                "rate": 0.03078
+              },
+              {
+                "over": 12000.0,
+                "rate": 0.03762
+              },
+              {
+                "over": 25000.0,
+                "rate": 0.03819
+              },
+              {
+                "over": 50000.0,
+                "rate": 0.03876
+              }
+            ],
+            "married": [
+              {
+                "over": 0.0,
+                "rate": 0.03078
+              },
+              {
+                "over": 21600.0,
+                "rate": 0.03762
+              },
+              {
+                "over": 45000.0,
+                "rate": 0.03819
+              },
+              {
+                "over": 90000.0,
+                "rate": 0.03876
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "over": 0.0,
+                "rate": 0.03078
+              },
+              {
+                "over": 14400.0,
+                "rate": 0.03762
+              },
+              {
+                "over": 30000.0,
+                "rate": 0.03819
+              },
+              {
+                "over": 60000.0,
+                "rate": 0.03876
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "NY State, IT-201 instructions: NYC tax rate schedule and Yonkers surcharge",
+          "url": "https://www.tax.ny.gov/forms/current-forms/it/it201i.htm"
+        }
+      ],
+      "notes": [
+        "NYC household credit and school tax credit are not modeled.",
+        "Uses the 2025 NYC schedule (rates have been unchanged since 2017)."
+      ]
+    },
+    {
+      "id": "ny-yonkers",
+      "state": "NY",
+      "name": "Yonkers",
+      "components": [
+        {
+          "name": "Yonkers resident surcharge",
+          "base": "stateTax",
+          "rate": 0.1675
+        }
+      ],
+      "sources": [
+        {
+          "name": "NY State, IT-201 instructions: NYC tax rate schedule and Yonkers surcharge",
+          "url": "https://www.tax.ny.gov/forms/current-forms/it/it201i.htm"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "pa-philadelphia",
+      "state": "PA",
+      "name": "Philadelphia",
+      "components": [
+        {
+          "name": "Wage tax (resident)",
+          "base": "wages",
+          "rate": 0.037375
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Philadelphia, Wage Tax rates",
+          "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/wage-tax-employers/"
+        }
+      ],
+      "notes": [
+        "Blended calendar-year rate: the resident rate changes each July 1 (3.75% \u2192 3.74% in 2025, 3.74% \u2192 3.735% in 2026)."
+      ]
+    },
+    {
+      "id": "pa-pittsburgh",
+      "state": "PA",
+      "name": "Pittsburgh",
+      "components": [
+        {
+          "name": "Earned income tax (city 1% + school district 2%)",
+          "base": "wages",
+          "rate": 0.03
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Pittsburgh, earned income tax",
+          "url": "https://www.pittsburghpa.gov/Business-Development/Finance/Tax-Information"
+        }
+      ],
+      "notes": [
+        "The $52/year local services tax is not included."
+      ]
+    },
+    {
+      "id": "mi-detroit",
+      "state": "MI",
+      "name": "Detroit",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.024,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-grand-rapids",
+      "state": "MI",
+      "name": "Grand Rapids",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.015,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-saginaw",
+      "state": "MI",
+      "name": "Saginaw",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.015,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-highland-park",
+      "state": "MI",
+      "name": "Highland Park",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.02,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-lansing",
+      "state": "MI",
+      "name": "Lansing",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-east-lansing",
+      "state": "MI",
+      "name": "East Lansing",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-flint",
+      "state": "MI",
+      "name": "Flint",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-pontiac",
+      "state": "MI",
+      "name": "Pontiac",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-battle-creek",
+      "state": "MI",
+      "name": "Battle Creek",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-jackson",
+      "state": "MI",
+      "name": "Jackson",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-muskegon",
+      "state": "MI",
+      "name": "Muskegon",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-hamtramck",
+      "state": "MI",
+      "name": "Hamtramck",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "mi-port-huron",
+      "state": "MI",
+      "name": "Port Huron",
+      "components": [
+        {
+          "name": "City income tax (resident)",
+          "base": "wages",
+          "rate": 0.01,
+          "exemptionPerPerson": 600
+        }
+      ],
+      "sources": [
+        {
+          "name": "Michigan Treasury, city income tax",
+          "url": "https://www.michigan.gov/taxes/business-taxes/withholding/city-income-tax"
+        }
+      ],
+      "notes": [
+        "Uses a $600 per-person exemption; some cities allow a different amount."
+      ]
+    },
+    {
+      "id": "oh-columbus",
+      "state": "OH",
+      "name": "Columbus",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-cleveland",
+      "state": "OH",
+      "name": "Cleveland",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-cincinnati",
+      "state": "OH",
+      "name": "Cincinnati",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.018
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-toledo",
+      "state": "OH",
+      "name": "Toledo",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-akron",
+      "state": "OH",
+      "name": "Akron",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-dayton",
+      "state": "OH",
+      "name": "Dayton",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-youngstown",
+      "state": "OH",
+      "name": "Youngstown",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.0275
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "oh-canton",
+      "state": "OH",
+      "name": "Canton",
+      "components": [
+        {
+          "name": "Municipal income tax",
+          "base": "wages",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Ohio Dept. of Taxation, municipal income tax rates",
+          "url": "https://tax.ohio.gov/researcher/tax-analysis/tax-data-series/municipal-income-tax"
+        }
+      ],
+      "notes": [
+        "Assumes you live and work in the city; credits for tax paid to a work city are not modeled."
+      ]
+    },
+    {
+      "id": "mo-kansas-city",
+      "state": "MO",
+      "name": "Kansas City",
+      "components": [
+        {
+          "name": "Earnings tax",
+          "base": "wages",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "Kansas City, earnings tax",
+          "url": "https://www.kcmo.gov/city-hall/departments/finance/earnings-tax"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "mo-st-louis",
+      "state": "MO",
+      "name": "St. Louis",
+      "components": [
+        {
+          "name": "Earnings tax",
+          "base": "wages",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of St. Louis, earnings tax",
+          "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "ky-louisville",
+      "state": "KY",
+      "name": "Louisville (Jefferson County)",
+      "components": [
+        {
+          "name": "Occupational license tax (metro 1.45% + schools 0.75%)",
+          "base": "wages",
+          "rate": 0.022
+        }
+      ],
+      "sources": [
+        {
+          "name": "Louisville Metro Revenue Commission",
+          "url": "https://louisvilleky.gov/government/revenue-commission"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "ky-lexington",
+      "state": "KY",
+      "name": "Lexington-Fayette",
+      "components": [
+        {
+          "name": "Occupational license tax",
+          "base": "wages",
+          "rate": 0.0225
+        }
+      ],
+      "sources": [
+        {
+          "name": "Lexington-Fayette Urban County Government, revenue",
+          "url": "https://www.lexingtonky.gov/departments/revenue"
+        }
+      ],
+      "notes": [
+        "The 0.5% school board tax is not included."
+      ]
+    },
+    {
+      "id": "de-wilmington",
+      "state": "DE",
+      "name": "Wilmington",
+      "components": [
+        {
+          "name": "Earned income tax",
+          "base": "wages",
+          "rate": 0.0125
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Wilmington, earned income tax",
+          "url": "https://www.wilmingtonde.gov/government/city-departments/finance/earned-income-tax"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "al-birmingham",
+      "state": "AL",
+      "name": "Birmingham",
+      "components": [
+        {
+          "name": "Occupational tax",
+          "base": "wages",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Birmingham, occupational tax",
+          "url": "https://www.birminghamal.gov/finance/"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "or-portland-multnomah",
+      "state": "OR",
+      "name": "Portland / Multnomah County (Metro)",
+      "components": [
+        {
+          "name": "Metro Supportive Housing Services tax",
+          "base": "stateTaxable",
+          "brackets": {
+            "single": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 128000.0,
+                "rate": 0.01
+              }
+            ],
+            "married": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 205000.0,
+                "rate": 0.01
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 128000.0,
+                "rate": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "Multnomah County Preschool for All tax",
+          "base": "stateTaxable",
+          "brackets": {
+            "single": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 125000.0,
+                "rate": 0.015
+              },
+              {
+                "over": 250000.0,
+                "rate": 0.03
+              }
+            ],
+            "married": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 200000.0,
+                "rate": 0.015
+              },
+              {
+                "over": 400000.0,
+                "rate": 0.03
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 125000.0,
+                "rate": 0.015
+              },
+              {
+                "over": 250000.0,
+                "rate": 0.03
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Portland Revenue Division, Metro SHS and Multnomah County PFA personal taxes",
+          "url": "https://www.portland.gov/revenue/personal-tax"
+        }
+      ],
+      "notes": [
+        "Metro thresholds were indexed to inflation starting in 2026; Preschool for All thresholds were not.",
+        "Both taxes use Oregon taxable income as an approximation of their own base."
+      ]
+    },
+    {
+      "id": "or-metro-other",
+      "state": "OR",
+      "name": "Metro area outside Multnomah County",
+      "components": [
+        {
+          "name": "Metro Supportive Housing Services tax",
+          "base": "stateTaxable",
+          "brackets": {
+            "single": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 128000.0,
+                "rate": 0.01
+              }
+            ],
+            "married": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 205000.0,
+                "rate": 0.01
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "over": 0.0,
+                "rate": 0.0
+              },
+              {
+                "over": 128000.0,
+                "rate": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "sources": [
+        {
+          "name": "City of Portland Revenue Division, Metro SHS and Multnomah County PFA personal taxes",
+          "url": "https://www.portland.gov/revenue/personal-tax"
+        }
+      ],
+      "notes": [
+        "Metro thresholds were indexed to inflation starting in 2026; Preschool for All thresholds were not."
+      ]
+    },
+    {
+      "id": "md-allegany",
+      "state": "MD",
+      "name": "Allegany County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-anne-arundel",
+      "state": "MD",
+      "name": "Anne Arundel County",
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": [],
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "brackets": {
+            "single": [
+              {
+                "over": 0.0,
+                "rate": 0.027
+              },
+              {
+                "over": 50000.0,
+                "rate": 0.0294
+              },
+              {
+                "over": 400000.0,
+                "rate": 0.032
+              }
+            ],
+            "married": [
+              {
+                "over": 0.0,
+                "rate": 0.027
+              },
+              {
+                "over": 75000.0,
+                "rate": 0.0294
+              },
+              {
+                "over": 480000.0,
+                "rate": 0.032
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "over": 0.0,
+                "rate": 0.027
+              },
+              {
+                "over": 75000.0,
+                "rate": 0.0294
+              },
+              {
+                "over": 480000.0,
+                "rate": 0.032
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "md-baltimore-city",
+      "state": "MD",
+      "name": "Baltimore City",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-baltimore-county",
+      "state": "MD",
+      "name": "Baltimore County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-calvert",
+      "state": "MD",
+      "name": "Calvert County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-caroline",
+      "state": "MD",
+      "name": "Caroline County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-carroll",
+      "state": "MD",
+      "name": "Carroll County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0303
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-cecil",
+      "state": "MD",
+      "name": "Cecil County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0274
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-charles",
+      "state": "MD",
+      "name": "Charles County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0303
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-dorchester",
+      "state": "MD",
+      "name": "Dorchester County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.033
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-frederick",
+      "state": "MD",
+      "name": "Frederick County",
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": [
+        "Frederick County applies a single rate to all taxable income, chosen by income level."
+      ],
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "tiers": {
+            "single": [
+              {
+                "upTo": 25000,
+                "rate": 0.0225
+              },
+              {
+                "upTo": 50000,
+                "rate": 0.0275
+              },
+              {
+                "upTo": 150000,
+                "rate": 0.0296
+              },
+              {
+                "upTo": null,
+                "rate": 0.032
+              }
+            ],
+            "married": [
+              {
+                "upTo": 25000,
+                "rate": 0.0225
+              },
+              {
+                "upTo": 100000,
+                "rate": 0.0275
+              },
+              {
+                "upTo": 250000,
+                "rate": 0.0296
+              },
+              {
+                "upTo": null,
+                "rate": 0.032
+              }
+            ],
+            "headOfHousehold": [
+              {
+                "upTo": 25000,
+                "rate": 0.0225
+              },
+              {
+                "upTo": 100000,
+                "rate": 0.0275
+              },
+              {
+                "upTo": 250000,
+                "rate": 0.0296
+              },
+              {
+                "upTo": null,
+                "rate": 0.032
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "md-garrett",
+      "state": "MD",
+      "name": "Garrett County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0265
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-harford",
+      "state": "MD",
+      "name": "Harford County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0306
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-howard",
+      "state": "MD",
+      "name": "Howard County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-kent",
+      "state": "MD",
+      "name": "Kent County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.033
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-montgomery",
+      "state": "MD",
+      "name": "Montgomery County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-prince-georges",
+      "state": "MD",
+      "name": "Prince George's County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-queen-annes",
+      "state": "MD",
+      "name": "Queen Anne's County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-somerset",
+      "state": "MD",
+      "name": "Somerset County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-st-marys",
+      "state": "MD",
+      "name": "St. Mary's County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-talbot",
+      "state": "MD",
+      "name": "Talbot County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.024
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-washington",
+      "state": "MD",
+      "name": "Washington County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0295
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-wicomico",
+      "state": "MD",
+      "name": "Wicomico County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.032
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "md-worcester",
+      "state": "MD",
+      "name": "Worcester County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0225
+        }
+      ],
+      "sources": [
+        {
+          "name": "Maryland DLS, 2026 county local tax rates",
+          "url": "https://dls.maryland.gov/pubs/prod/NoPblTabPDF/2026CountyLocalTaxRates.pdf"
+        },
+        {
+          "name": "Comptroller of Maryland, Withholding Tax Facts 2025",
+          "url": "https://www.marylandcomptroller.gov/content/dam/mdcomp/tax/legal-publications/facts/Withholding-Tax-Facts-2025.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-adams",
+      "state": "IN",
+      "name": "Adams County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.016
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-allen",
+      "state": "IN",
+      "name": "Allen County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0159
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-bartholomew",
+      "state": "IN",
+      "name": "Bartholomew County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0175
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-benton",
+      "state": "IN",
+      "name": "Benton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0179
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-blackford",
+      "state": "IN",
+      "name": "Blackford County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-boone",
+      "state": "IN",
+      "name": "Boone County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": [
+        "Boone County's rate rose to 1.71% on Oct 1, 2026 for withholding; the Jan 1 rate is used."
+      ]
+    },
+    {
+      "id": "in-brown",
+      "state": "IN",
+      "name": "Brown County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025234
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-carroll",
+      "state": "IN",
+      "name": "Carroll County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.024733
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-cass",
+      "state": "IN",
+      "name": "Cass County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0295
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-clark",
+      "state": "IN",
+      "name": "Clark County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-clay",
+      "state": "IN",
+      "name": "Clay County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0235
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-clinton",
+      "state": "IN",
+      "name": "Clinton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0265
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-crawford",
+      "state": "IN",
+      "name": "Crawford County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0165
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-daviess",
+      "state": "IN",
+      "name": "Daviess County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.015
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-dekalb",
+      "state": "IN",
+      "name": "DeKalb County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0213
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-dearborn",
+      "state": "IN",
+      "name": "Dearborn County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.014
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-decatur",
+      "state": "IN",
+      "name": "Decatur County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0245
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-delaware",
+      "state": "IN",
+      "name": "Delaware County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.015
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-dubois",
+      "state": "IN",
+      "name": "Dubois County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.012
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-elkhart",
+      "state": "IN",
+      "name": "Elkhart County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-fayette",
+      "state": "IN",
+      "name": "Fayette County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0282
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-floyd",
+      "state": "IN",
+      "name": "Floyd County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0189
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-fountain",
+      "state": "IN",
+      "name": "Fountain County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.021
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-franklin",
+      "state": "IN",
+      "name": "Franklin County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-fulton",
+      "state": "IN",
+      "name": "Fulton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0288
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-gibson",
+      "state": "IN",
+      "name": "Gibson County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.013
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-grant",
+      "state": "IN",
+      "name": "Grant County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0275
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-greene",
+      "state": "IN",
+      "name": "Greene County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0235
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-hamilton",
+      "state": "IN",
+      "name": "Hamilton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.011
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-hancock",
+      "state": "IN",
+      "name": "Hancock County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0194
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-harrison",
+      "state": "IN",
+      "name": "Harrison County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-hendricks",
+      "state": "IN",
+      "name": "Hendricks County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-henry",
+      "state": "IN",
+      "name": "Henry County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0202
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-howard",
+      "state": "IN",
+      "name": "Howard County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0235
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-huntington",
+      "state": "IN",
+      "name": "Huntington County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0195
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-jackson",
+      "state": "IN",
+      "name": "Jackson County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.021
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-jasper",
+      "state": "IN",
+      "name": "Jasper County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02864
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-jay",
+      "state": "IN",
+      "name": "Jay County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-jefferson",
+      "state": "IN",
+      "name": "Jefferson County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0103
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-jennings",
+      "state": "IN",
+      "name": "Jennings County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-johnson",
+      "state": "IN",
+      "name": "Johnson County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.014
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-knox",
+      "state": "IN",
+      "name": "Knox County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-kosciusko",
+      "state": "IN",
+      "name": "Kosciusko County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-lagrange",
+      "state": "IN",
+      "name": "LaGrange County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0165
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-laporte",
+      "state": "IN",
+      "name": "LaPorte County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0145
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-lake",
+      "state": "IN",
+      "name": "Lake County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.015
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-lawrence",
+      "state": "IN",
+      "name": "Lawrence County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0175
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-madison",
+      "state": "IN",
+      "name": "Madison County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0225
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-marion",
+      "state": "IN",
+      "name": "Marion County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0202
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-marshall",
+      "state": "IN",
+      "name": "Marshall County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0125
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-martin",
+      "state": "IN",
+      "name": "Martin County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-miami",
+      "state": "IN",
+      "name": "Miami County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0254
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-monroe",
+      "state": "IN",
+      "name": "Monroe County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0214
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-montgomery",
+      "state": "IN",
+      "name": "Montgomery County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0265
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-morgan",
+      "state": "IN",
+      "name": "Morgan County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0272
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-newton",
+      "state": "IN",
+      "name": "Newton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-noble",
+      "state": "IN",
+      "name": "Noble County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0175
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-ohio",
+      "state": "IN",
+      "name": "Ohio County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-orange",
+      "state": "IN",
+      "name": "Orange County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0175
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-owen",
+      "state": "IN",
+      "name": "Owen County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.025
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-parke",
+      "state": "IN",
+      "name": "Parke County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0265
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-perry",
+      "state": "IN",
+      "name": "Perry County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.014
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-pike",
+      "state": "IN",
+      "name": "Pike County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.012
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-porter",
+      "state": "IN",
+      "name": "Porter County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.005
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-posey",
+      "state": "IN",
+      "name": "Posey County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0145
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-pulaski",
+      "state": "IN",
+      "name": "Pulaski County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0285
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-putnam",
+      "state": "IN",
+      "name": "Putnam County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.023
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-randolph",
+      "state": "IN",
+      "name": "Randolph County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.03
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-ripley",
+      "state": "IN",
+      "name": "Ripley County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0238
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-rush",
+      "state": "IN",
+      "name": "Rush County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0215
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-scott",
+      "state": "IN",
+      "name": "Scott County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0216
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-shelby",
+      "state": "IN",
+      "name": "Shelby County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-spencer",
+      "state": "IN",
+      "name": "Spencer County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.008
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-st-joseph",
+      "state": "IN",
+      "name": "St. Joseph County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0175
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-starke",
+      "state": "IN",
+      "name": "Starke County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0171
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-steuben",
+      "state": "IN",
+      "name": "Steuben County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0199
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-sullivan",
+      "state": "IN",
+      "name": "Sullivan County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.017
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-switzerland",
+      "state": "IN",
+      "name": "Switzerland County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0145
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-tippecanoe",
+      "state": "IN",
+      "name": "Tippecanoe County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0128
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-tipton",
+      "state": "IN",
+      "name": "Tipton County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.026
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-union",
+      "state": "IN",
+      "name": "Union County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0275
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-vanderburgh",
+      "state": "IN",
+      "name": "Vanderburgh County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0125
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-vermillion",
+      "state": "IN",
+      "name": "Vermillion County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.015
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-vigo",
+      "state": "IN",
+      "name": "Vigo County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-wabash",
+      "state": "IN",
+      "name": "Wabash County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.029
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-warren",
+      "state": "IN",
+      "name": "Warren County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0212
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-warrick",
+      "state": "IN",
+      "name": "Warrick County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.01
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-washington",
+      "state": "IN",
+      "name": "Washington County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.02
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-wayne",
+      "state": "IN",
+      "name": "Wayne County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0125
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-wells",
+      "state": "IN",
+      "name": "Wells County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.021
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-white",
+      "state": "IN",
+      "name": "White County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.0232
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "in-whitley",
+      "state": "IN",
+      "name": "Whitley County",
+      "components": [
+        {
+          "name": "County income tax",
+          "base": "stateTaxable",
+          "rate": 0.016829
+        }
+      ],
+      "sources": [
+        {
+          "name": "Indiana DOR, Departmental Notice #1 (county rates effective Jan 1, 2026)",
+          "url": "https://www.in.gov/dor/files/dn01.pdf"
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

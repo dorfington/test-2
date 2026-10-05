@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  @apply bg-slate-50 antialiased dark:bg-slate-950;
+}
+
+/* Chart roles. Validated with the dataviz palette checker against the card
+   surfaces (white / slate-900): first three categorical slots, all-pairs. */
+:root {
+  --c-needs: #2a78d6;
+  --c-wants: #eb6834;
+  --c-savings: #1baf7a;
+  --c-unassigned: #c3c2b7;
+  --c-target: #52514e;
+  --c-track: #eef0f2;
+}
+.dark {
+  --c-needs: #3987e5;
+  --c-wants: #d95926;
+  --c-savings: #199e70;
+  --c-unassigned: #475569;
+  --c-target: #c3c2b7;
+  --c-track: #1e293b;
+}
