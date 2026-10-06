@@ -56,6 +56,30 @@ On the Income step, **Take a photo** or **Upload photo or PDF** of a recent pay 
 
 Tests use hand-written stub layouts, a generated PDF read with pdf.js, and real Tesseract output from a scanned and a photographed stub (`src/paystub/__tests__`).
 
+## Bank & credit card statements
+
+The **Accounts** tab has upload areas for bank statements (checking and savings) and credit card statements; **Insights** analyses them. Everything stays on the device: files are read in the browser, and data is stored in IndexedDB. Account numbers are never stored (at most the last 4 digits).
+
+- **Formats:**
+  - **CSV** is read by header name. Tested with Chase (bank and card), Amex, Capital One, Discover, Bank of America (with its summary preamble), Citi, Wells Fargo (no header), Apple Card and US Bank layouts.
+  - **OFX/QFX** works in both SGML and XML, using FITIDs and the ledger balance.
+  - **PDF statements** are best-effort: signs come from section headings and CR marks, years from the statement period, and the closing balance is read. An import preview shows money in vs. out, with a one-tap flip.
+- **Duplicates:** matched by FITID, or by account + date + amount + description + occurrence. Overlapping or repeated imports add nothing twice, and two identical same-day purchases are both kept. Any import can be undone.
+- **Categorizing (`src/finance/categorize.ts`):**
+  - Your own rules come first.
+  - Card payments and transfers are ignored, so purchases aren't counted twice. Matching pairs across your accounts are detected too.
+  - Moves to savings or brokerage accounts count as saving.
+  - Paychecks and interest count as income, and card credits as refunds.
+  - Everything else is matched against merchant patterns for the budget's own categories.
+  - Change a category once and it's remembered for that merchant.
+- **Insights (`src/finance/analysis.ts`):**
+  - actual vs. your plan for any month
+  - month-by-month income, spending, saving and savings rate (complete months detected)
+  - goal progress from linked accounts' balances
+  - recurring charges, with price increases (fixed-price charges only) and possibly canceled ones
+  - **Fill in my budget**, from your average real spending
+- **Backup (`src/finance/backup.ts`):** an encrypted `.thb` file holding your plan and all account data. It uses PBKDF2-SHA256 (600,000 iterations) and AES-256-GCM in the browser, and can be restored on another device.
+
 ## Budget rules
 
 - **Base for 50/30/20:** take-home pay plus pre-tax payroll deductions. Your 401(k)/HSA counts as savings and your health premiums count as needs. The employer match is extra savings, shown separately.
@@ -83,6 +107,8 @@ src/model/          profile schema, conversions, validation, what-if
 src/store/          Zustand store persisted to localStorage
 src/features/       setup steps and the results dashboard
 src/export/         one report model -> CSV and PDF (jsPDF, loaded on demand)
+src/finance/        statements: parsers, import/dedupe, categorization, analysis, IndexedDB, encrypted backup
+src/paystub/        pay stub reading (pdf.js text layer or on-device OCR) and parsing
 ```
 
 ## Tax engine

@@ -22,6 +22,7 @@ body {
   --c-unassigned: #c3c2b7;
   --c-target: #52514e;
   --c-track: #eef0f2;
+  --c-surface: #ffffff;
 }
 .dark {
   --c-needs: #3987e5;
@@ -30,4 +31,5 @@ body {
   --c-unassigned: #475569;
   --c-target: #c3c2b7;
   --c-track: #1e293b;
+  --c-surface: #0f172a;
 }

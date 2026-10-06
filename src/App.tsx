@@ -1,7 +1,19 @@
-import { useEffect, useSyncExternalStore } from 'react'
+import { lazy, Suspense, useEffect, useSyncExternalStore } from 'react'
 import { Button, Segmented } from './components/ui'
 import { SetupFlow } from './features/setup/SetupFlow'
-import { useBudgetStore, type Theme } from './store/useBudgetStore'
+import { cx } from './lib/cx'
+import { useBudgetStore, type Theme, type View } from './store/useBudgetStore'
+import { useFinanceStore } from './store/useFinanceStore'
+
+// Statement tools load only when those tabs are opened.
+const AccountsPage = lazy(() => import('./features/accounts/AccountsPage').then((m) => ({ default: m.AccountsPage })))
+const InsightsPage = lazy(() => import('./features/insights/InsightsPage').then((m) => ({ default: m.InsightsPage })))
+
+const TABS: { id: View; label: string }[] = [
+  { id: 'budget', label: 'Budget' },
+  { id: 'accounts', label: 'Accounts' },
+  { id: 'insights', label: 'Insights' },
+]
 
 const darkQuery = () => window.matchMedia('(prefers-color-scheme: dark)')
 
@@ -22,7 +34,15 @@ export default function App() {
   const theme = useBudgetStore((s) => s.theme)
   const setTheme = useBudgetStore((s) => s.setTheme)
   const reset = useBudgetStore((s) => s.reset)
+  const view = useBudgetStore((s) => s.view)
+  const setView = useBudgetStore((s) => s.setView)
+  const loadFinance = useFinanceStore((s) => s.load)
+  const clearFinance = useFinanceStore((s) => s.clearAll)
   const dark = useResolvedDark(theme)
+
+  useEffect(() => {
+    void loadFinance()
+  }, [loadFinance])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
@@ -54,7 +74,10 @@ export default function App() {
               variant="ghost"
               className="whitespace-nowrap"
               onClick={() => {
-                if (window.confirm('Clear all your entries and start over?')) reset()
+                if (window.confirm('Delete everything stored in this browser (your budget plan, accounts and transactions) and start over?')) {
+                  reset()
+                  void clearFinance()
+                }
               }}
             >
               Start over
@@ -63,8 +86,33 @@ export default function App() {
         </div>
       </header>
 
+      <nav aria-label="Sections" className="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+        <div className="mx-auto flex max-w-5xl gap-1 px-4">
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              aria-current={view === t.id ? 'page' : undefined}
+              onClick={() => setView(t.id)}
+              className={cx(
+                '-mb-px border-b-2 px-3 py-2.5 text-sm font-medium transition-colors',
+                view === t.id
+                  ? 'border-teal-700 text-teal-800 dark:border-teal-400 dark:text-teal-300'
+                  : 'border-transparent text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100',
+              )}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      </nav>
+
       <main className="mx-auto max-w-5xl px-4 py-6">
-        <SetupFlow />
+        {view === 'budget' && <SetupFlow />}
+        <Suspense fallback={<p role="status" className="py-12 text-center text-sm text-slate-500">Loading…</p>}>
+          {view === 'accounts' && <AccountsPage />}
+          {view === 'insights' && <InsightsPage goToAccounts={() => setView('accounts')} />}
+        </Suspense>
       </main>
 
       <footer className="mx-auto max-w-5xl px-4 pb-8 text-xs text-slate-500 dark:text-slate-400">
@@ -74,7 +122,7 @@ export default function App() {
         </p>
         <p className="mt-2">
           <strong className="font-semibold">Private by design:</strong> no accounts, no tracking or analytics. Everything you enter is saved only in
-          this browser on this device and is never sent anywhere. Pay stubs are read on your device and never uploaded.
+          this browser on this device and is never sent anywhere. Pay stubs and bank or card statements are read on your device and never uploaded.
         </p>
       </footer>
     </div>
