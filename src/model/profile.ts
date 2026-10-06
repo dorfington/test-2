@@ -76,6 +76,11 @@ export const ProfileSchema = z.object({
     hourlyRate: amount,
     hoursPerWeek: z.number().min(0).max(168),
     payFrequency: z.enum(PAY_FREQUENCIES),
+    /**
+     * Your actual take-home (net) pay per paycheck, from a pay stub or typed in.
+     * When set, the budget uses it instead of the estimate. null = use the estimate.
+     */
+    netPerPaycheck: amount.nullable().default(null),
   }),
   taxes: z.object({
     year: z.number().int(),
@@ -119,7 +124,7 @@ export function makeExpense(kind: ExpenseKind, overrides: Partial<Expense> = {})
 }
 
 export const DEFAULT_PROFILE: Profile = {
-  income: { payType: 'salary', annualSalary: 0, hourlyRate: 0, hoursPerWeek: 40, payFrequency: 'biweekly' },
+  income: { payType: 'salary', annualSalary: 0, hourlyRate: 0, hoursPerWeek: 40, payFrequency: 'biweekly', netPerPaycheck: null },
   taxes: {
     year: DEFAULT_TAX_YEAR,
     filingStatus: 'single',

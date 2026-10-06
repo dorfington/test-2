@@ -123,9 +123,13 @@ function withHousingOverride(expenses: Expense[], monthlyHousing: number | undef
   })
 }
 
-export function buildBudget(profile: Profile, tax: TaxResult, whatIf: WhatIf = {}): Budget {
+/**
+ * `takeHomeAnnual` replaces the estimated take-home pay, e.g. with the
+ * actual pay from your paychecks.
+ */
+export function buildBudget(profile: Profile, tax: TaxResult, whatIf: WhatIf = {}, takeHomeAnnual?: number): Budget {
   const expenses = withHousingOverride(profile.expenses, whatIf.monthlyHousing)
-  const takeHome = tax.net / 12
+  const takeHome = (takeHomeAnnual ?? tax.net) / 12
   const grossMonthly = tax.gross / 12
 
   const allocations: Allocation[] = [

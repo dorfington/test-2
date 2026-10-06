@@ -70,6 +70,16 @@ export function IncomeStep({ errors }: { errors: Errors }) {
               <p className="col-span-3 text-xs text-slate-500 dark:text-slate-400">Gross pay, before taxes and deductions</p>
             </dl>
           )}
+
+          <Field
+            label="Your actual take-home pay per paycheck (optional)"
+            hint="The net pay on your pay stub or the deposit you get. If you enter it, your budget uses it instead of the tax estimate, and the results show where the two differ."
+          >
+            {(id, d) => (
+              <NumberInput id={id} describedBy={d} prefix="$" step={0.01} value={income.netPerPaycheck ?? 0} placeholder="Use the estimate"
+                onChange={(v) => update((p) => void (p.income.netPerPaycheck = v > 0 ? v : null))} />
+            )}
+          </Field>
         </div>
       </Card>
     </div>

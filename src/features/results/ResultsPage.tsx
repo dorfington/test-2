@@ -1,11 +1,12 @@
 import { Button, Card, Notice } from '../../components/ui'
 import { money, money0, pct } from '../../lib/format'
 import { periods } from '../../model/derive'
-import { PAY_FREQUENCY_LABELS } from '../../model/profile'
-import type { Step } from '../../store/useBudgetStore'
+import { PAY_FREQUENCY_LABELS, PERIODS_PER_YEAR } from '../../model/profile'
+import { useBudgetStore, type Step } from '../../store/useBudgetStore'
 import { useResults } from './useResults'
 import { ExportCard } from './ExportCard'
 import { Goals, Recommendations } from './Insights'
+import { PaycheckCompare } from './PaycheckCompare'
 import { WithholdingCard } from './WithholdingCard'
 import { SpendingDonut } from './SpendingDonut'
 import { SplitBars } from './SplitBars'
@@ -14,6 +15,7 @@ import { WhatIfPanel } from './WhatIfPanel'
 
 export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
   const results = useResults()
+  const update = useBudgetStore((s) => s.update)
 
   if (!results) {
     return (
@@ -23,8 +25,11 @@ export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
     )
   }
 
-  const { profile, whatIf, tax, budget, withholding, deltaPerMonth } = results
-  const net = periods(tax.net, profile.income.payFrequency)
+  const { profile, whatIf, tax, budget, reconciliation, withholding, deltaPerMonth } = results
+  const n = PERIODS_PER_YEAR[profile.income.payFrequency]
+  const net = periods(budget.takeHome * 12, profile.income.payFrequency)
+  // With your actual pay entered, the headline is your paycheck (moved by any what-if change).
+  const paycheck = reconciliation ? reconciliation.actual + ((deltaPerMonth ?? 0) * 12) / n : net.paycheck
   const notes = [...tax.state.notes, ...(tax.local?.notes ?? [])]
   const editLinks = (
     <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -46,8 +51,15 @@ export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
       <section aria-labelledby="summary-heading" className="rounded-2xl bg-teal-800 p-5 text-white shadow-sm sm:p-6 dark:bg-teal-900">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h2 id="summary-heading" className="text-sm font-medium text-teal-100">Take-home pay per paycheck ({PAY_FREQUENCY_LABELS[profile.income.payFrequency].toLowerCase()})</h2>
-            <p className="mt-1 text-4xl font-semibold tracking-tight sm:text-5xl">{money(net.paycheck, true)}</p>
+            <h2 id="summary-heading" className="text-sm font-medium text-teal-100">
+              {reconciliation ? 'Your take-home pay per paycheck' : 'Take-home pay per paycheck'} ({PAY_FREQUENCY_LABELS[profile.income.payFrequency].toLowerCase()})
+            </h2>
+            <p className="mt-1 text-4xl font-semibold tracking-tight sm:text-5xl">{money(paycheck, true)}</p>
+            {reconciliation && (
+              <p className="mt-1 text-sm text-teal-100">
+                {Math.abs(reconciliation.diff) < 1 ? 'Matches' : 'Estimate'} from taxes: {money(reconciliation.estimate.net + ((deltaPerMonth ?? 0) * 12) / n, true)}
+              </p>
+            )}
           </div>
           <div className="text-sm text-teal-100 sm:text-right">
             <div>Tax year {tax.year}</div>
@@ -97,9 +109,16 @@ export function ResultsPage({ onEdit }: { onEdit: (s: Step) => void }) {
           )}
         </Card>
         <Card title="Gross to take-home" action={editLinks}>
-          <TaxBreakdown result={tax} payFrequency={profile.income.payFrequency} />
+          <TaxBreakdown result={tax} payFrequency={profile.income.payFrequency} estimated={!!reconciliation} />
         </Card>
       </div>
+
+      {reconciliation && (
+        <Card title="Your paycheck vs. the estimate">
+          <PaycheckCompare r={reconciliation} withholding={profile.withholding} onEditIncome={() => onEdit('income')}
+            onClear={() => update((p) => void (p.income.netPerPaycheck = null))} />
+        </Card>
+      )}
 
       {withholding && (
         <Card title="Withholding check (from your pay stub)">
