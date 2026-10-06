@@ -1,0 +1,1 @@
+function e(e,t=2.5){let n=[];for(let r of e){if(!r.str||!r.str.trim())continue;let e=r.transform[5],i=n.find(n=>Math.abs(n.y-e)<=t);i?i.items.push(r):n.push({y:e,items:[r]})}return n.sort((e,t)=>t.y-e.y).map(e=>e.items.sort((e,t)=>e.transform[4]-t.transform[4]).map(e=>e.str.trim()).join(` `))}export{e as linesFromTextItems};
