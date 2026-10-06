@@ -74,7 +74,7 @@ export default function App() {
         </p>
         <p className="mt-2">
           <strong className="font-semibold">Private by design:</strong> no accounts, no tracking or analytics. Everything you enter is saved only in
-          this browser on this device and is never sent anywhere.
+          this browser on this device and is never sent anywhere. Pay stubs are read on your device and never uploaded.
         </p>
       </footer>
     </div>
