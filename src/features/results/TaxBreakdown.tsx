@@ -7,7 +7,7 @@ import { PERIODS_PER_YEAR, type PayFrequency } from '../../model/profile'
 type Period = 'year' | 'month' | 'paycheck'
 
 /** Line-by-line path from gross pay to take-home pay. */
-export function TaxBreakdown({ result, payFrequency }: { result: TaxResult; payFrequency: PayFrequency }) {
+export function TaxBreakdown({ result, payFrequency, estimated = false }: { result: TaxResult; payFrequency: PayFrequency; estimated?: boolean }) {
   const [period, setPeriod] = useState<Period>('month')
   const div = period === 'year' ? 1 : period === 'month' ? 12 : PERIODS_PER_YEAR[payFrequency]
   const r = result
@@ -55,7 +55,7 @@ export function TaxBreakdown({ result, payFrequency }: { result: TaxResult; payF
             </Fragment>
           ))}
           <tr>
-            <th scope="row" className="pt-3 text-left text-base font-semibold text-slate-900 dark:text-slate-100">Take-home pay</th>
+            <th scope="row" className="pt-3 text-left text-base font-semibold text-slate-900 dark:text-slate-100">{estimated ? 'Estimated take-home pay' : 'Take-home pay'}</th>
             <td className="pt-3 pl-3 text-right whitespace-nowrap text-base font-semibold tabular-nums text-teal-800 dark:text-teal-300">{money(r.net / div, cents)}</td>
           </tr>
         </tbody>

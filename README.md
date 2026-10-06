@@ -54,6 +54,14 @@ On the Income step, **Take a photo** or **Upload photo or PDF** of a recent pay 
 - Every value is shown with the stub text it came from, and you confirm or edit it before it's applied. A value that couldn't be read is left out, never treated as $0.
 - **Withholding check:** tax withheld per paycheck × paychecks per year is compared with the estimated tax, to show a likely refund or balance due.
 
+## Actual take-home pay
+
+The tax estimate rarely matches a real paycheck to the cent, so you can enter your **actual take-home pay per paycheck** on the Income step (a pay stub fills it in from its net pay). When it's set:
+
+- The budget, the 50/30/20 split and the leftover use your actual pay. A what-if change moves it by the estimated change. With a spouse on a joint return, their pay stays estimated.
+- **Your paycheck vs. the estimate** (`src/budget/reconcile.ts`) lays your estimated paycheck out line by line next to your stub. Where the stub's withholding is known, it splits the gap into tax withholding differences (payroll formulas and W-4 settings, which even out at tax time) and **other deductions not entered here**, such as Roth 401(k), after-tax insurance or union dues. That points to what to add to get the estimate to match.
+- **Use the estimate instead** clears it.
+
 Tests use hand-written stub layouts, a generated PDF read with pdf.js, and real Tesseract output from a scanned and a photographed stub (`src/paystub/__tests__`).
 
 ## Bank & credit card statements

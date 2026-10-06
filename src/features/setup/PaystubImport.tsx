@@ -122,7 +122,7 @@ function Review({ review: r, method, onChange, onCancel, onApply }: {
     onChange({ ...r, [key]: { ...(r[key] as object), ...patch } })
   const annual = reviewAnnualGross(r)
 
-  const money$ = (key: 'grossPerPaycheck' | 'hourlyRate' | 'retirementPerPaycheck' | 'healthPerPaycheck' | 'hsaPerPaycheck' | 'federalWithheld' | 'stateWithheld' | 'localWithheld', label: string, opts: { suffix?: string; prefix?: string } = { prefix: '$' }) => {
+  const money$ = (key: 'grossPerPaycheck' | 'netPerPaycheck' | 'hourlyRate' | 'retirementPerPaycheck' | 'healthPerPaycheck' | 'hsaPerPaycheck' | 'federalWithheld' | 'stateWithheld' | 'localWithheld', label: string, opts: { suffix?: string; prefix?: string } = { prefix: '$' }) => {
     const f = r[key]
     if (!f) return null
     return (
@@ -169,6 +169,7 @@ function Review({ review: r, method, onChange, onCancel, onApply }: {
         ) : (
           money$('grossPerPaycheck', 'Gross pay per paycheck')
         )}
+        {money$('netPerPaycheck', 'Take-home (net) pay')}
         {annual !== undefined && <p className="text-sm text-slate-700 dark:text-slate-300">= <strong className="tabular-nums">{money(annual, false)}</strong> a year before taxes</p>}
       </Section>
 

@@ -19,7 +19,7 @@ describe('conversions', () => {
   })
 
   it('computes hourly gross as rate x hours x 52', () => {
-    expect(annualGross({ payType: 'hourly', annualSalary: 0, hourlyRate: 25, hoursPerWeek: 40, payFrequency: 'weekly' })).toBe(52_000)
+    expect(annualGross({ payType: 'hourly', annualSalary: 0, hourlyRate: 25, hoursPerWeek: 40, payFrequency: 'weekly', netPerPaycheck: null })).toBe(52_000)
   })
 
   it('annualizes per-paycheck deductions by pay frequency', () => {

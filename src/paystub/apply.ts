@@ -18,6 +18,8 @@ export interface StubReview {
   /** Salary: gross per paycheck × paychecks per year. Hourly: rate × hours per week × 52. */
   payType: 'salary' | 'hourly'
   grossPerPaycheck?: ReviewField<number>
+  /** Take-home (net) pay this paycheck. */
+  netPerPaycheck?: ReviewField<number>
   hourlyRate?: ReviewField<number>
   hoursPerWeek?: ReviewField<number>
   retirementPerPaycheck?: ReviewField<number>
@@ -50,6 +52,7 @@ export function reviewFromStub(d: PaystubData): StubReview {
     payType: hourly ? 'hourly' : 'salary',
     payFrequency: field(d.payFrequency),
     grossPerPaycheck: field(d.grossPay),
+    netPerPaycheck: field(d.netPay),
     retirementPerPaycheck: field(d.retirement),
     healthPerPaycheck: field(d.healthInsurance),
     hsaPerPaycheck: field(d.hsa),
@@ -121,6 +124,9 @@ export function applyStub(profile: Profile, r: StubReview): Profile {
     p.income.payType = 'salary'
     p.income.annualSalary = r2(gross * PERIODS_PER_YEAR[pay])
   }
+
+  const net = used(r.netPerPaycheck)
+  if (net !== undefined) p.income.netPerPaycheck = net > 0 ? net : null
 
   const annual = p.income.payType === 'hourly' ? p.income.hourlyRate * p.income.hoursPerWeek * 52 : p.income.annualSalary
   const perPaycheckGross = annual / PERIODS_PER_YEAR[pay]

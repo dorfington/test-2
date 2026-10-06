@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { buildBudget } from '../../budget/budget'
+import { reconcile } from '../../budget/reconcile'
 import { withholdingCheck } from '../../budget/withholding'
 import { calculateTaxes } from '../../engine'
 import { toTaxInput } from '../../model/derive'
@@ -13,9 +14,20 @@ export function useResults() {
     const input = toTaxInput(profile, whatIf)
     if (!input) return null
     const tax = calculateTaxes(input)
-    const budget = buildBudget(profile, tax, whatIf)
     const hasWhatIf = Object.keys(whatIf).length > 0
-    const savedNet = hasWhatIf ? calculateTaxes(toTaxInput(profile)!).net : tax.net
-    return { profile, whatIf, tax, budget, withholding: withholdingCheck(profile, tax), deltaPerMonth: hasWhatIf ? (tax.net - savedNet) / 12 : null }
+    const savedTax = hasWhatIf ? calculateTaxes(toTaxInput(profile)!) : tax
+    // Your actual paycheck describes your pay as saved; a what-if moves it by the estimated change.
+    const reconciliation = reconcile(profile, savedTax)
+    const takeHomeAnnual = reconciliation ? reconciliation.householdAnnual + (tax.net - savedTax.net) : undefined
+    const budget = buildBudget(profile, tax, whatIf, takeHomeAnnual)
+    return {
+      profile,
+      whatIf,
+      tax,
+      budget,
+      reconciliation,
+      withholding: withholdingCheck(profile, savedTax),
+      deltaPerMonth: hasWhatIf ? (tax.net - savedTax.net) / 12 : null,
+    }
   }, [profile, whatIf])
 }

@@ -15,6 +15,21 @@ beforeEach(() => {
 })
 
 describe('results dashboard', () => {
+  it('uses your actual take-home pay when entered, and explains the gap', () => {
+    useBudgetStore.getState().update((p) => void (p.income.netPerPaycheck = 5_000))
+    render(<ResultsPage onEdit={() => {}} />)
+    expect(screen.getByText('Your take-home pay per paycheck (monthly)')).toBeInTheDocument()
+    expect(screen.getByText('Estimate from taxes: $5,132.71')).toBeInTheDocument()
+    expect(screen.getByText(/Your paycheck is \$132\.71 less than the estimate/)).toBeInTheDocument()
+    expect(screen.getByText(/More tax withheld than estimated, or deductions on your pay stub that aren't entered here/)).toBeInTheDocument()
+    // The budget runs on $5,000: $2,700 of expenses leaves $2,300.
+    expect(screen.getAllByText(/\$2,300/).length).toBeGreaterThan(0)
+
+    fireEvent.click(screen.getByRole('button', { name: 'Use the estimate instead' }))
+    expect(useBudgetStore.getState().profile.income.netPerPaycheck).toBeNull()
+    expect(screen.queryByText('Your paycheck vs. the estimate')).not.toBeInTheDocument()
+  })
+
   it('shows take-home pay, the split and flags', () => {
     render(<ResultsPage onEdit={() => {}} />)
     // Texas single $75,000: 61,592.50/yr, paid monthly

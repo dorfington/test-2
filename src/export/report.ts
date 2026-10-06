@@ -45,7 +45,9 @@ export function buildReport(profile: Profile, tax: TaxResult, budget: Budget, wh
     ...(tax.state.hasIncomeTax ? [triple(`${tax.state.name} income tax`, -tax.state.tax)] : []),
     ...(tax.local ? tax.local.items.map((i) => triple(`${tax.local!.name}: ${i.name}`, -i.amount)) : []),
     ...tax.statePayroll.map((i) => triple(i.name, -i.amount)),
-    triple('Take-home pay', tax.net),
+    triple(profile.income.netPerPaycheck !== null ? 'Take-home pay (estimate)' : 'Take-home pay', tax.net),
+    // The budget runs on your actual pay when it's entered.
+    ...(profile.income.netPerPaycheck !== null ? [triple('Take-home pay (your actual, used for the budget)', budget.takeHome * 12)] : []),
   ]
 
   const scenario = Object.keys(whatIf).length

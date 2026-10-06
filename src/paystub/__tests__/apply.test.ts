@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest'
+import { reconcile } from '../../budget/reconcile'
 import { withholdingCheck } from '../../budget/withholding'
 import { calculateTaxes } from '../../engine'
 import { toTaxInput } from '../../model/derive'
 import { DEFAULT_PROFILE } from '../../model/profile'
 import { applyStub, reviewAnnualGross, reviewFromStub } from '../apply'
 import { parsePaystub } from '../parse'
-import { ADP_CA, GUSTO_NYC, OCR_SIDE_BY_SIDE, TESSERACT_PHOTO } from './fixtures'
+import { ADP_CA, GUSTO_NYC, OCR_SIDE_BY_SIDE, TESSERACT_PHOTO, TESSERACT_SCAN } from './fixtures'
 
 const fresh = () => structuredClone(DEFAULT_PROFILE)
 
@@ -21,7 +22,24 @@ describe('reviewFromStub + applyStub', () => {
     expect(p.deductions.hsa).toEqual({ amount: 50, frequency: 'paycheck' })
     expect(p.taxes).toMatchObject({ state: 'CA', filingStatus: 'single', year: 2026 })
     expect(p.withholding).toEqual({ federalPerPaycheck: 310.06, statePerPaycheck: 136.5, localPerPaycheck: null, payDate: '2026-10-02' })
+    expect(p.income.netPerPaycheck).toBe(2173.11)
     expect(r.notes.join(' ')).toMatch(/where your employer withholds/)
+  })
+
+  it('a scanned stub reconciles with the estimate to within FICA rounding', () => {
+    const p = applyStub(fresh(), reviewFromStub(parsePaystub(TESSERACT_SCAN)))
+    p.taxes.state = 'IL'
+    expect(p.income.netPerPaycheck).toBe(1884.93)
+    const r = reconcile(p, calculateTaxes(toTaxInput(p)!))!
+    // Every deduction on this stub is entered, so only withholding explains the gap.
+    expect(r.explained.map((g) => g.name)).toEqual(['Federal income tax', 'Illinois income tax'])
+    expect(Math.abs(r.unexplained)).toBeLessThan(2)
+  })
+
+  it('net pay can be unchecked, keeping the estimate', () => {
+    const r = reviewFromStub(parsePaystub(ADP_CA))
+    r.netPerPaycheck!.use = false
+    expect(applyStub(fresh(), r).income.netPerPaycheck).toBeNull()
   })
 
   it('Gusto hourly stub fills hourly pay, NYC and flags the Roth 401(k)', () => {
